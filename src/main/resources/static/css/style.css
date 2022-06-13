@@ -1,82 +1,83 @@
 :root {
-    --white: #F7F7F7;
-    --orange: #FFB72B;
-    --yellow: #FFE61B;
-    --green: #B5FE83;
-    --black: #23272a;
+  --white: #F7F7F7;
+  --orange: #FFB72B;
+  --yellow: #FFE61B;
+  --green: #B5FE83;
+  --black: #23272a;
 }
 
 * {
-    /* background-color: var(--white); */
-    font-family: 'Roboto', sans-serif;
+  /* background-color: var(--white); */
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-    margin: 0;
+  margin: 0;
+
 }
 
 .navbar {
-    width: 100%;
-    overflow: auto;
+  width: 100%;
+  overflow: auto;
 }
 
 .nav_list {
-    float: left;
-    list-style: none;
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
+  float: left;
+  list-style: none;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .nav_list a:hover {
-    background-color: var(--orange);
-    transition: 0.5s;
-    text-transform: uppercase;
+  background-color: var(--orange);
+  transition: 0.5s;
+  text-transform: uppercase;
 
 }
 
 .companylogo {
-    position: absolute;
-    margin-top: 15px;
-    margin-left: 10px;
-    align-self: flex-start;
-    padding: 0;
-    height: 75px;
-    width: 75px;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+  align-self: flex-start;
+  padding: 0;
+  height: 75px;
+  width: 75px;
 }
 
 .nav_searchbar {
-    width: 100px;
-    display: block;
-    padding: 20px 15px;
-    text-decoration: none;
-    text-align: center;
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .searchbar {}
 
 .nav_tours_link {
-    width: 100px;
-    display: block;
-    padding: 20px 15px;
-    text-decoration: none;
-    text-align: center;
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .nav_about_link {
-    width: 100px;
-    display: block;
-    padding: 20px 15px;
-    text-decoration: none;
-    text-align: center;
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .nav_faq_link {
-    width: 100px;
-    display: block;
-    padding: 20px 15px;
-    text-decoration: none;
-    text-align: center;
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-align: center;
 }
 
 body {}
@@ -84,24 +85,24 @@ body {}
 .top_container {}
 
 .amazon {
-    position: relative;
-    text-align: center;
-    color: var(--white);
+  position: relative;
+  text-align: center;
+  color: var(--white);
 }
 
 .motto {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 70px;
-    text-shadow: 5px 5px 10px var(--black);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  text-shadow: 5px 5px 10px var(--black);
 }
 
 .amazon_pic {
-    width: 850px;
-    height: 350px;
-    background-size: cover;
+  width: 850px;
+  height: 350px;
+  background-size: cover;
 }
 
 .jac_intro {}
@@ -110,4 +111,17 @@ body {}
 
 h2, footer {
   text-align: center;
+}
+
+hr {
+  border-color: var(--green);
+}
+
+ul {
+  display: inline;
+}
+
+#return {
+  text-align: center;
+  padding: 10px;
 }
