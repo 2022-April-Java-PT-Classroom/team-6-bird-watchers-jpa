@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,13 @@
 <body>
 
   <header>
+      <div><form th:action="@{/}">
+          Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+          &nbsp;
+          <input type="submit" value="Search" />
+          &nbsp;
+          <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+      </form></div>
     <nav class="navbar">
         <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
         <ul class="nav_list">
@@ -23,7 +30,7 @@
             </li>
             <li><a href="" class="nav_tours_link">Tours</a></li>
             <li><a href="" class="nav_about_link">About</a></li>
-            <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
+            <li><a href="Faq" class="nav_faq_link">Faq</a></li>
         </ul>
     </nav>
 </header>
@@ -39,7 +46,7 @@
             nisi facilis nulla eum ipsa rerum sapiente voluptatem possimus quia adipisci, architecto consequuntur, dicta
             atque. Repudiandae, at.</p>
     </section>
-
+<h1>fadfas</h1>
     <section class="middle_container">
         <div class="bird_part">
             <p class="bird_watching">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi earum error saepe,
@@ -49,6 +56,7 @@
             <p class="bird_watching_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptate
                 expedita hic nesciunt fugiat nobis, vitae omnis ut, modi alias unde, et dolor quasi a ab ad sed numquam
                 tempora.</p>
+
         </div>
     </section>
 
@@ -60,6 +68,7 @@
             <img src="" alt="" class="hiking_pic_link">
         </div>
     </section>
+
 
     <hr>
 

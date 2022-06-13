@@ -1,4 +1,8 @@
 package org.wecancodeit.birdwatcher.Repositories;
 
-public interface HabitatRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import org.wecancodeit.birdwatcher.Models.Habitat;
+
+public interface HabitatRepository  {
 }
