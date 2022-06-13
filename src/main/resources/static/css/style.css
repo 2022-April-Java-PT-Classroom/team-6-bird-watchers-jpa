@@ -13,7 +13,6 @@
 
 header {
     margin: 0;
-
 }
 
 .navbar {
@@ -108,3 +107,7 @@ body {}
 .jac_intro {}
 
 .intro {}
+
+h2, footer {
+  text-align: center;
+}
