@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+table img {
+  max-width: 165px;
+  max-height: 165px;
+  border: 1px solid #23272a;
+}
+
+table {
+  max-width: 100%;
+  table-layout: fixed;
+  border: 1px solid #FFB72B;
+  margin: 20px;
+}
