@@ -8,8 +8,11 @@ import java.util.Collection;
 import java.util.List;
 
 
-public interface BirdRepository   {
+public interface BirdRepository extends CrudRepository<Bird, Long>  {
 
+    List<Bird> findByBirdName(String name);
+    List<Bird> findByBirdType(String type);
+    List<Bird> findByBirdOrder(String order);
 
-
+    Bird findById(long id);
 }
