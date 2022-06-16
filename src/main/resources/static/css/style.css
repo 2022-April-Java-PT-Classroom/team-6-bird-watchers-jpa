@@ -108,9 +108,7 @@ body {}
   text-align: center;
 }
 
-.middle_container {
-
-}
+.middle_container {}
 
 .bird_part {
   position: relative;
@@ -119,12 +117,12 @@ body {}
 }
 
 .bird_watching {
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 70px;
-text-shadow: 5px 5px 10px var(--black);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  text-shadow: 5px 5px 10px var(--black);
 }
 
 .bird_pic {
@@ -141,17 +139,22 @@ text-shadow: 5px 5px 10px var(--black);
   text-align: center;
 }
 
-.bottom_container {
-
-}
+.bottom_container {}
 
 .tours_part {
   justify-content: center;
   text-align: center;
 }
 
-.tours_heading {
+.tours_heading {}
 
+.tours_text_over_image {
+  position: absolute;
+  /* top: 35%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  text-shadow: 5px 5px 10px var(--black);
 }
 
 .skywalk_pic_link {
@@ -159,6 +162,7 @@ text-shadow: 5px 5px 10px var(--black);
   width: 250px;
   transition: transform .2s;
 }
+
 .skywalk_pic_link:hover {
   transform: scale(1.1);
 }
@@ -168,6 +172,7 @@ text-shadow: 5px 5px 10px var(--black);
   width: 250px;
   transition: transform .2s;
 }
+
 .riverboat_pic_link:hover {
   transform: scale(1.1);
 }
@@ -177,11 +182,13 @@ text-shadow: 5px 5px 10px var(--black);
   height: 250px;
   transition: transform .2s;
 }
+
 .hiking_pic_link:hover {
   transform: scale(1.1);
 }
 
-h2, footer {
+h2,
+footer {
   text-align: center;
 }
 

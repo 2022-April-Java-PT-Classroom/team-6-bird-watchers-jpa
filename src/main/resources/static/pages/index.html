@@ -14,27 +14,29 @@
 
 <body>
 
-  <header>
-      
-    <nav class="navbar">
-        
-        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-        <div class="searchbar"><form th:action="@{/}">
-            Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-            &nbsp;
-            <input type="submit" value="Search" />
-            &nbsp;
-            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-        </form></div>
-        <ul class="nav_list">
-            <li class="nav_searchbar">
-            </li>
-            <li><a href="../tours" class="nav_tours_link">Tours</a></li>
-            <li><a href="about.html" class="nav_about_link">About</a></li>
-            <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+
+        <nav class="navbar">
+
+            <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+            <div class="searchbar">
+                <form th:action="@{/}">
+                    Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                    &nbsp;
+                    <input type="submit" value="Search" />
+                    &nbsp;
+                    <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                </form>
+            </div>
+            <ul class="nav_list">
+                <li class="nav_searchbar">
+                </li>
+                <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+                <li><a href="about.html" class="nav_about_link">About</a></li>
+                <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="top_container">
         <div class="amazon">
@@ -43,13 +45,15 @@
             <img class="amazon_pic" src="../images/amazon_rainforest.jpg" alt="Pic of rainforest">
         </div>
         <h2 class="jac_intro">JAC Enterprises</h2>
-        <p class="intro">JAC Enterprises is an organization that specializes in offering niche adventures dedicated to learning about Earth's various ecosystems and unique terrains. Our motto is, "Vincit Qui Se Vincit" which means, "He/she conquers who conquers him/herself."</p>
+        <p class="intro">JAC Enterprises is an organization that specializes in offering niche adventures dedicated to
+            learning about Earth's various ecosystems and unique terrains. Our motto is, "Vincit Qui Se Vincit" which
+            means, "He/she conquers who conquers him/herself."</p>
     </section>
 
     <section class="middle_container">
         <div class="bird_part">
             <p class="bird_watching">Bird Watching</p>
-            <img src="../images/toucan.jpg" alt="" class="bird_pic">
+            <img src="../images/birds/toucan.jpg" alt="" class="bird_pic">
         </div>
         <p class="bird_watching_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptate
             expedita hic nesciunt fugiat nobis, vitae omnis ut, modi alias unde, et dolor quasi a ab ad sed numquam
@@ -59,8 +63,11 @@
     <section class="bottom_container">
         <div class="tours_part">
             <h2 class="tours_heading">Tours We Offer</h2>
+            <p class="tours_text_over_image">Sky Walk Tour</p>
             <img src="../images/canopywalk.jpg" alt="Picture of Canopy Bridge" class="skywalk_pic_link">
+            <p class="tours_text_over_image">Riverboat Tour</p>
             <img src="../images/riverhomepgpic.jpg" alt="" class="riverboat_pic_link">
+            <p class="tours_text_over_image">Hiking Tour</p>
             <img src="../images/hikehomepgpic.jpg" alt="Picture of Forest" class="hiking_pic_link">
         </div>
     </section>
@@ -69,8 +76,11 @@
     <hr>
 
     <footer>
-        <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
+        <p>&copy JAC Enterprises | <a href="../pages/terms-and-conditions.html" class="terms_conditions">Terms &
+                Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+            Reserved.</p>
     </footer>
 
 </body>
+
 </html>
