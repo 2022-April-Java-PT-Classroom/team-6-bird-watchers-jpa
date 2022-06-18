@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Tour {
-
     @Id
     @GeneratedValue
     private Long id;
@@ -36,7 +38,7 @@ public class Tour {
         return description;
     }
 
-    public Collection<Bird> getBirds(){
+    public Collection<Bird> getBirds() {
         return birds;
     }
 
@@ -52,9 +54,10 @@ public class Tour {
         return region;
     }
 
-    public Tour(){}
+    public Tour() {
+    }
 
-    public Tour(String name, String description, Country country, Region region, Habitat habitat, Bird...birds){
+    public Tour(String name, String description, Country country, Region region, Habitat habitat, Bird... birds) {
         this.name = name;
         this.description = description;
         this.country = country;
@@ -74,6 +77,7 @@ public class Tour {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+
+
     }
 }
-

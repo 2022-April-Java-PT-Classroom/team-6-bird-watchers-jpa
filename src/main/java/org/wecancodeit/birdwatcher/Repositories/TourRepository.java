@@ -8,4 +8,5 @@ import org.wecancodeit.birdwatcher.Models.Tour;
 @Repository
 public interface TourRepository extends CrudRepository<Tour, Long> {
 
+
 }
