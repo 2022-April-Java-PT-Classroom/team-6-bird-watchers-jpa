@@ -1,6 +1,8 @@
 package org.wecancodeit.birdwatcher.Models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -12,20 +14,14 @@ public class Tour {
     private Long id;
     private String name;
     private String description;
+    @ManyToOne
+    private Country country;
+    @ManyToOne
+    private Region region;
+    @ManyToOne
+    private Habitat habitat;
     @ManyToMany
     private Collection<Bird> birds;
-    @ManyToOne
-    private Collection<Country> countries;
-    @ManyToOne
-    private Collection<Habitat> habitats;
-    @ManyToOne
-    private Collection<Region> regions;
-
-    // not solid about the relationship configurations
-    // Example: many tours happen in Brazil, but each tour takes place within only one country
-
-    // also could be a nested relationship such as region>country or country>region,
-    // but I think we need all of these in this model for search functionality
 
 
     public Long getId() {
@@ -44,23 +40,27 @@ public class Tour {
         return birds;
     }
 
-    public Collection<Country> getCountries() {
-        return countries;
+    public Country getCountry() {
+        return country;
     }
 
-    public Collection<Habitat> getHabitats() {
-        return habitats;
+    public Habitat habitat() {
+        return habitat;
     }
 
-    public Collection<Region> getRegions() {
-        return regions;
+    public Region region() {
+        return region;
     }
 
     public Tour(){}
 
-    public Tour(String name, String description){
+    public Tour(String name, String description, Country country, Region region, Habitat habitat, Bird...birds){
         this.name = name;
         this.description = description;
+        this.country = country;
+        this.region = region;
+        this.habitat = habitat;
+        this.birds = new ArrayList<>(Arrays.asList(birds));
     }
 
     @Override
@@ -76,3 +76,4 @@ public class Tour {
         return Objects.hash(id);
     }
 }
+
