@@ -38,12 +38,17 @@ This also assumes we're using a jpg, so just change that if it's not.
 Below will generate a list of birds. I think we need to
 link them to their own pages to get bird info to generate
 based on how back end is likely to code this (and for
-simplicity's sake right now).
+simplicity's sake right now). Link might need altering.
 -->
 <ul>
     <li th:each="bird:${tour.birds}">
+        <a th:href="@{'birds/' + $bird.id}}" th:text="${bird.name}" target="_blank">Bird</a>
     </li>
 </ul>
+
+<div id="return">
+    <a href="index.html">Return Home</a>
+</div>
 
 <footer>
     <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
