@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tour</title>
 </head>
 <body>
+
+<header>
+    <nav class="navbar">
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+                <section class="searchbar"></section>
+            </li>
+            <li><a href="" class="nav_tours_link">Tours</a></li>
+            <li><a href="about.html" class="nav_about_link">About</a></li>
+            <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h2 th:text="${tour.name}">Tour Name</h2>
+
+<p th:text="${tour.description}">Description</p>
+
+<!--
+The image tag below will generate one image for each tour
+as long as the image name is the exact same as the name of the tour.
+The image will need to be saved under the tours folder inside images.
+This also assumes we're using a jpg, so just change that if it's not.
+-->
+<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">
+
+<!--
+Below will generate a list of birds. I think we need to
+link them to their own pages to get bird info to generate
+based on how back end is likely to code this (and for
+simplicity's sake right now).
+-->
+<ul>
+    <li th:each="bird:${tour.birds}">
+    </li>
+</ul>
+
+<footer>
+    <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
