@@ -4,7 +4,7 @@ package org.wecancodeit.birdwatcher.Models;
 import javax.persistence.*;
 import java.util.Collection;
 
-
+@Entity
 public class Country {
 
     @Id
