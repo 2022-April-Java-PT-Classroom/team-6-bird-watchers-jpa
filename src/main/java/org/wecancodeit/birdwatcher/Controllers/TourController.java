@@ -19,39 +19,39 @@ public class TourController {
     return "toursTemplate";
     }
 
-    @RequestMapping("/tours/{name}")
+    @RequestMapping("/tours/{tourName}")
     public String displaySingleTourByName(@PathVariable String name, Model model){
-    model.addAttribute("Tour", tourRepository.findByName(name));
+    model.addAttribute("Tour", tourRepository.findByTourName(name));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{description}")
+    @RequestMapping("/tours/{tourDescription}")
     public String displaySingleTourByDescription(@PathVariable String description, Model model){
-    model.addAttribute("Tour", tourRepository.findByDescription(description));
+    model.addAttribute("Tour", tourRepository.findByTourDescription(description));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{country}")
+    @RequestMapping("/tours/{tourCountry}")
     public String displaySingleTourByCountry(@PathVariable String country, Model model){
-    model.addAttribute("Tour", tourRepository.findByCountry(country));
+    model.addAttribute("Tour", tourRepository.findByTourCountry(country));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{region}")
+    @RequestMapping("/tours/{tourRegion}")
     public String displaySingleTourByRegion(@PathVariable String region, Model model){
-    model.addAttribute("Tour", tourRepository.findByRegion(region));
+    model.addAttribute("Tour", tourRepository.findByTourRegion(region));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{habitat}")
+    @RequestMapping("/tours/{tourHabitat}")
     public String displaySingleTourByHabitat(@PathVariable String habitat, Model model){
-    model.addAttribute("Tour", tourRepository.findByHabitat(habitat));
+    model.addAttribute("Tour", tourRepository.findByTourHabitat(habitat));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{birds}")
+    @RequestMapping("/tours/{tourBirds}")
     public String displaySingleTourByBirds(@PathVariable String birds, Model model){
-    model.addAttribute("Tour", tourRepository.findByBirds(birds));
+    model.addAttribute("Tour", tourRepository.findByTourBirds(birds));
     return "tourTemplate";
     }
 }

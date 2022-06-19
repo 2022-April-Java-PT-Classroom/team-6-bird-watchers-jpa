@@ -19,9 +19,9 @@ public class RegionController {
     return "regionTemplate";
     }
 
-    @RequestMapping("/region/{name}")
+    @RequestMapping("/region/{regionName}")
     public String displaySingleRegion(@PathVariable String name, Model model){
-    model.addAttribute("Region", regionRepository.findByName(name));
+    model.addAttribute("Region", regionRepository.findByRegionName(name));
     return "regionTemplate";
     }
 }

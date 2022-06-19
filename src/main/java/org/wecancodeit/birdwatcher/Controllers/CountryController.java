@@ -20,9 +20,9 @@ public class CountryController {
     return "countryTemplate";
     }
 
-    @RequestMapping("/country/{name}")
+    @RequestMapping("/country/{countryName}")
     public String displaySingleCountry(@PathVariable String name, Model model){
-    model.addAttribute("Country", countryRepository.findByName(name));
+    model.addAttribute("Country", countryRepository.findByCountryName(name));
     return "countryTemplate";
     }
 
