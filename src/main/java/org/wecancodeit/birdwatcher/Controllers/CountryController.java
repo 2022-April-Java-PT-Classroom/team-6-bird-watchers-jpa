@@ -10,14 +10,20 @@ import org.wecancodeit.birdwatcher.Repositories.CountryRepository;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/country")
 public class CountryController {
     @Resource
     private CountryRepository countryRepository;
 
-    @RequestMapping("/{id}")
-    public String displaySingleCountry(Model model, @PathVariable Long id){
-    model.addAttribute("Country", countryRepository.findById(id));
+    @RequestMapping("/country")
+    public String displayAllCountries(Model model){
+    model.addAttribute("Country", countryRepository.findAll());
     return "countryTemplate";
     }
+
+    @RequestMapping("/country/{name}")
+    public String displaySingleCountry(@PathVariable String name, Model model){
+    model.addAttribute("Country", countryRepository.findByCountry(name));
+    return "countryTemplate";
+    }
+
 }
