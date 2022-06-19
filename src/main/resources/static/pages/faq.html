@@ -8,19 +8,30 @@
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-        <ul class="nav_list">
-            <li class="nav_searchbar">
-                <section class="searchbar"></section>
-            </li>
-            <li><a href="" class="nav_tours_link">Tours</a></li>
-            <li><a href="about.html" class="nav_about_link">About</a></li>
-            <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
-        </ul>
-    </nav>
-  </header>
+    <header>
+
+        <nav class="navbar">
+
+            <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+            <div class="searchbar">
+                <form th:action="@{/}">
+                    Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                    &nbsp;
+                    <input type="submit" value="Search" />
+                    &nbsp;
+                    <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                </form>
+            </div>
+            <ul class="nav_list">
+                <li class="nav_searchbar">
+                </li>
+                <li><a href="../pages/index.html" class="nav_home_link">Home</a></li>
+                <li><a href="../templates/toursTemplate.html" class="nav_tours_link">Tours</a></li>
+                <li><a href="../pages/about.html" class="nav_about_link">About</a></li>
+                <li><a href="../pages/faq.html" class="nav_faq_link">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <h2>FAQ</h2>
 
@@ -52,12 +63,12 @@
   <div id="return">
     <a href="index.html">Return Home</a>
   </div>
-
   <hr>
-
-  <footer>
-    <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
-  </footer>
+  <footer class="terms_f">
+    <p>&copy JAC Enterprises | <a href="../pages/terms-and-conditions.html" class="terms_conditions">Terms &
+            Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+        Reserved.</p>
+</footer>
 
 </body>
 </html>

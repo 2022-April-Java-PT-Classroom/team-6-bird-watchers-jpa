@@ -12,18 +12,28 @@
 <body>
 
   <header>
+
     <nav class="navbar">
-      <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-      <ul class="nav_list">
-        <li class="nav_searchbar">
-          <section class="searchbar"></section>
-        </li>
-        <li><a href="../tours" class="nav_tours_link">Tours</a></li>
-        <li><a href="about.html" class="nav_about_link">About</a></li>
-        <li><a href="faq.html" class="nav_faq_link">Faq</a></li>
-      </ul>
+
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <div class="searchbar">
+            <form th:action="@{/}">
+                Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                &nbsp;
+                <input type="submit" value="Search" />
+                &nbsp;
+                <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+            </form>
+        </div>
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+            </li>
+            <li><a href="../templates/toursTemplate.html" class="nav_tours_link">Tours</a></li>
+            <li><a href="../pages/about.html" class="nav_about_link">About</a></li>
+            <li><a href="../pages/faq.html" class="nav_faq_link">Faq</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
   <h2>About Us</h2>
 
@@ -106,7 +116,7 @@
         <td><img src="../images/developers/gian.png"></td>
         <td>
           I’m an experienced Human Resource professional currently working as an HR Partner for
-          Amazon, with over 7 years of experience leading teams to achieving goals.
+          Amazon, with over 7 years of experience leading teams.
           This year, I’m fulfilling a personal goal by pivoting in my career to pursue a future in Tech. After
           learning Python and other languages on my own, I decided to enroll in an amazing bootcamp, WCCI, that
           has an accelerated approach to teaching and training future Software Engineers. Upon completion of my
