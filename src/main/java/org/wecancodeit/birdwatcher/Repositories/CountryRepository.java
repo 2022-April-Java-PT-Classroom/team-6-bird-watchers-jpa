@@ -5,6 +5,12 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.wecancodeit.birdwatcher.Models.Country;
 
+import java.util.List;
 @Repository
-public interface CountryRepository extends CrudRepository<Country,Long> {
+public interface CountryRepository extends CrudRepository<Country, Long> {
+
+    List<Country> findByCountry(String Country);
+
+    Country findById(long id);
+
 }
