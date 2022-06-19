@@ -56,6 +56,14 @@ header {
   padding-right: 10px;
 }
 
+.nav_home_link {
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
 .nav_tours_link {
   width: 100px;
   display: block;
@@ -80,7 +88,25 @@ header {
   text-align: center;
 }
 
-body {}
+h2,
+footer {
+  text-align: center;
+}
+
+hr {
+  border-color: var(--green);
+}
+
+ul {
+  display: inline;
+}
+
+#return {
+  text-align: center;
+  padding: 10px;
+}
+
+/* homepage css */
 
 .top_container {}
 
@@ -107,8 +133,6 @@ body {}
 .intro {
   text-align: center;
 }
-
-.middle_container {}
 
 .bird_part {
   position: relative;
@@ -139,14 +163,10 @@ body {}
   text-align: center;
 }
 
-.bottom_container {}
-
 .tours_part {
   justify-content: center;
   text-align: center;
 }
-
-.tours_heading {}
 
 .tours_text_over_image {
   position: absolute;
@@ -187,20 +207,50 @@ body {}
   transform: scale(1.1);
 }
 
-h2,
-footer {
+/* Terms & Conditions css */
+
+.terms_f {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.terms_h {
   text-align: center;
 }
 
-hr {
-  border-color: var(--green);
+.terms_list {
+  list-style: decimal;
+  text-align: left;
+  display: inline-block;
 }
 
-ul {
-  display: inline;
-}
+/* CSS for Tours page */
 
-#return {
+.feature_txt {
   text-align: center;
-  padding: 10px;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.tours_feature_img {
+  width: 100%;
+  height: 850px;
+}
+
+.feature_imgs {
+  height: 250px;
+  width: 350px;
+}
+
+.feature_imgs_sky {
+  height: 350px;
+  width: 350px;
+}
+
+.middle_container_tours {
+  text-align: center;
 }

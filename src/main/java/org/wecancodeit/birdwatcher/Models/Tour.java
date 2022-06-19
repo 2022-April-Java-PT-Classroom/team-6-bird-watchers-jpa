@@ -78,6 +78,5 @@ public class Tour {
     public int hashCode() {
         return Objects.hash(id);
 
-
     }
 }
