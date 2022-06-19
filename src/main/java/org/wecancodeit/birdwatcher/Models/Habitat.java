@@ -12,8 +12,21 @@ public class Habitat {
     private Long id;
     private String name;
 
+    public Long getId(){
+        return id;
+    }
 
-    public Habitat(String name) {
+    public String getName(){
+        return name;
+    }
+
+    public Habitat(){
 
     }
+
+    public Habitat(String name) {
+        this.id = id;
+        this.name = name;
+    }
+
 }

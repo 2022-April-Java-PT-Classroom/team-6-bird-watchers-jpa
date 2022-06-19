@@ -11,7 +11,20 @@ public class Region {
     private Long id;
     private String name;
 
-    public Region(String name) {
+    public Long getId(){
+        return id;
+    }
 
+    public String getName(){
+        return name;
+    }
+
+    public Region(){
+
+    }
+
+    public Region(String name) {
+        this.id = id;
+        this.name = name;
     }
 }
