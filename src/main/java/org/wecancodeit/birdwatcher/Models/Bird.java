@@ -10,7 +10,6 @@ public class Bird {
     @Id@GeneratedValue
     private Long id;
     private String name;
-
     private String birdType;
     private String birdOrder;
 

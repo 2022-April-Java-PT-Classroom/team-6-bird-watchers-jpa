@@ -22,7 +22,7 @@ public class CountryController {
 
     @RequestMapping("/country/{name}")
     public String displaySingleCountry(@PathVariable String name, Model model){
-    model.addAttribute("Country", countryRepository.findByCountry(name));
+    model.addAttribute("Country", countryRepository.findByName(name));
     return "countryTemplate";
     }
 
