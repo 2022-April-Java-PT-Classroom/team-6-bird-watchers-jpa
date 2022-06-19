@@ -2,7 +2,6 @@ package org.wecancodeit.birdwatcher.Models;
 
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 public class Country {
@@ -10,7 +9,7 @@ public class Country {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String countryName;
 
 
 
@@ -18,17 +17,17 @@ public class Country {
 
     }
 
-    public Country(String name) {
+    public Country(String countryName) {
         this.id = id;
-        this.name = name;
+        this.countryName = countryName;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getCountryName() {
+        return countryName;
     }
 
 

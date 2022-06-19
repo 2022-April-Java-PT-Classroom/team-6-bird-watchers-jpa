@@ -14,56 +14,56 @@ public class Tour {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
-    private String description;
+    private String tourName;
+    private String tourDescription;
     @ManyToOne
-    private Country country;
+    private Country tourCountry;
     @ManyToOne
-    private Region region;
+    private Region tourRegion;
     @ManyToOne
-    private Habitat habitat;
+    private Habitat tourHabitat;
     @ManyToMany
-    private Collection<Bird> birds;
+    private Collection<Bird> tourBirds;
 
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getTourName() {
+        return tourName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTourDescription() {
+        return tourDescription;
     }
 
-    public Collection<Bird> getBirds() {
-        return birds;
+    public Collection<Bird> getTourBirds() {
+        return tourBirds;
     }
 
-    public Country getCountry() {
-        return country;
+    public Country getTourCountry() {
+        return tourCountry;
     }
 
     public Habitat habitat() {
-        return habitat;
+        return tourHabitat;
     }
 
     public Region region() {
-        return region;
+        return tourRegion;
     }
 
     public Tour() {
     }
 
-    public Tour(String name, String description, Country country, Region region, Habitat habitat, Bird... birds) {
-        this.name = name;
-        this.description = description;
-        this.country = country;
-        this.region = region;
-        this.habitat = habitat;
-        this.birds = new ArrayList<>(Arrays.asList(birds));
+    public Tour(String tourName, String tourDescription, Country country, Region region, Habitat habitat, Bird... birds) {
+        this.tourName = tourName;
+        this.tourDescription = tourDescription;
+        this.tourCountry = country;
+        this.tourRegion = region;
+        this.tourHabitat = habitat;
+        this.tourBirds = new ArrayList<>(Arrays.asList(birds));
     }
 
     @Override

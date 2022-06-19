@@ -9,22 +9,22 @@ public class Region {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String regionName;
 
     public Long getId(){
         return id;
     }
 
-    public String getName(){
-        return name;
+    public String getRegionName(){
+        return regionName;
     }
 
     public Region(){
 
     }
 
-    public Region(String name) {
+    public Region(String regionName) {
         this.id = id;
-        this.name = name;
+        this.regionName = regionName;
     }
 }

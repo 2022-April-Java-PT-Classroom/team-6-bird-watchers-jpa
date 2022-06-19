@@ -15,7 +15,7 @@ public interface TourRepository extends CrudRepository<Tour, Long> {
     List<Tour> findByTourCountry(String country);
     List<Tour> findByTourRegion(String region);
     List<Tour> findByTourHabitat(String habitat);
-    List<Tour> findByTourBird(String bird);
+    List<Tour> findByTourBirds(String birds);
 
     Tour findById(long id);
 
