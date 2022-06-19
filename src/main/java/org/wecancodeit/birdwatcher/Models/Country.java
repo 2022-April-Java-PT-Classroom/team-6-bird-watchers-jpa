@@ -14,9 +14,12 @@ public class Country {
 
 
 
-    public Country(){}
+    public Country(){
+
+    }
 
     public Country(String name) {
+        this.id = id;
         this.name = name;
     }
 
