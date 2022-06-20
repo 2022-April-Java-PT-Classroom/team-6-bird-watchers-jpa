@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface HabitatRepository extends CrudRepository<Habitat, Long> {
 
-    List<Habitat> findByHabitatName(String habitatName);
+    Habitat findByHabitatName(String habitatName);
 
     Habitat findById(long id);
 

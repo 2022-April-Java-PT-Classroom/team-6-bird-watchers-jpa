@@ -1,8 +1,9 @@
 package org.wecancodeit.birdwatcher.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 @Entity
 public class Bird {
@@ -11,6 +12,8 @@ public class Bird {
     private String birdName;
     private String birdType;
     private String birdOrder;
+    @ManyToMany
+    private Collection<Tour> birdTours;
 
 
 
@@ -18,10 +21,11 @@ public class Bird {
 
     }
 
-    public Bird(String birdName, String birdType, String birdOrder) {
+    public Bird(String birdName, String birdType, String birdOrder, Tour... tours) {
         this.birdName = birdName;
         this.birdType = birdType;
         this.birdOrder = birdOrder;
+        this.birdTours = new ArrayList<>(Arrays.asList(tours));
     }
 
 
@@ -40,6 +44,8 @@ public class Bird {
     public String getBirdOrder() {
         return birdOrder;
     }
+
+    public Collection<Tour> getBirdTours(){ return birdTours;}
 
     @Override
     public String toString() {

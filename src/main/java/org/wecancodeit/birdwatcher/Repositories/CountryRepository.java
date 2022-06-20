@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface CountryRepository extends CrudRepository<Country, Long> {
 
-    List<Country> findByCountryName(String countryName);
+    Country findByCountryName(String countryName);
 
     Country findById(long id);
 
