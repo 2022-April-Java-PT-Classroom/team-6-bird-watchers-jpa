@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <title>Habitats</title>
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <div class="searchbar">
+            <form th:action="@{/}">
+                Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                &nbsp;
+                <input type="submit" value="Search" />
+                &nbsp;
+                <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+            </form>
+        </div>
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+            </li>
+            <li><a href="..//" class="nav_home_link">Home</a></li>
+            <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+            <li><a href="../about" class="nav_about_link">About</a></li>
+            <li><a href="../faq" class="nav_faq_link">Faq</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h2>List of Habitats</h2>
+
+<ul class="center-list">
+    <li th:each="habitat:${habitats}">
+        <a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}" target="_blank">Countries</a>
+    </li>
+</ul>
+
+<div id="return">
+    <a href="index.html">Return Home</a>
+</div>
+
+<hr>
+
+<footer>
+    <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
