@@ -10,12 +10,12 @@ import java.util.List;
 @Repository
 public interface TourRepository extends CrudRepository<Tour, Long> {
 
-    List<Tour> findByTourName(String name);
-    List<Tour> findByTourDescription(String description);
-    List<Tour> findByTourCountry(String country);
-    List<Tour> findByTourRegion(String region);
-    List<Tour> findByTourHabitat(String habitat);
-    List<Tour> findByTourBirds(String birds);
+    List<Tour> findByTourName(String tourName);
+    List<Tour> findByTourDescription(String tourDescription);
+    List<Tour> findByTourCountry(String tourCountry);
+    List<Tour> findByTourRegion(String tourRegion);
+    List<Tour> findByTourHabitat(String tourHabitat);
+    List<Tour> findByTourBirds(String tourBirds);
 
     Tour findById(long id);
 

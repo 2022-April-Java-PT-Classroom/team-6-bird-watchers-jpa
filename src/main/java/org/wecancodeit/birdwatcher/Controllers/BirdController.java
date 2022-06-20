@@ -23,8 +23,8 @@ public class BirdController {
     }
 
     @RequestMapping("/bird/{birdName}")
-    public String displaySingleBirdByName(@PathVariable String name, Model model){
-    model.addAttribute("Bird", birdRepository.findByBirdName(name));
+    public String displaySingleBirdByName(@PathVariable String birdName, Model model){
+    model.addAttribute("Bird", birdRepository.findByBirdName(birdName));
     return "birdTemplate";
     }
 

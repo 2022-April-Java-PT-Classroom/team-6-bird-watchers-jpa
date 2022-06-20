@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface BirdRepository extends CrudRepository<Bird, Long>  {
 
-    List<Bird> findByBirdName(String name);
-    List<Bird> findByBirdType(String type);
-    List<Bird> findByBirdOrder(String order);
+    List<Bird> findByBirdName(String birdName);
+    List<Bird> findByBirdType(String birdType);
+    List<Bird> findByBirdOrder(String birdOrder);
 
     Bird findById(long id);
 }

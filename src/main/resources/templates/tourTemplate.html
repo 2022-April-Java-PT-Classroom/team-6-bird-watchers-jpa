@@ -22,9 +22,9 @@
     </nav>
 </header>
 
-<h2 th:text="${tour.name}">Tour Name</h2>
+<h2 th:text="${tour.tourName}">Tour Name</h2>
 
-<p th:text="${tour.description}">Description</p>
+<p th:text="${tour.tourDescription}">Description</p>
 
 <!--
 The image tag below will generate one image for each tour
@@ -41,8 +41,8 @@ based on how back end is likely to code this (and for
 simplicity's sake right now). Link might need altering.
 -->
 <ul>
-    <li th:each="bird:${tour.birds}">
-        <a th:href="@{'birds/' + $bird.id}}" th:text="${bird.name}" target="_blank">Bird</a>
+    <li th:each="bird:${tour.tourBirds}">
+        <a th:href="@{'birds/' + $bird.id}}" th:text="${bird.birdName}" target="_blank">Bird</a>
     </li>
 </ul>
 

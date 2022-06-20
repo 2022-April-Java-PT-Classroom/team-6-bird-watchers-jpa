@@ -46,37 +46,37 @@ public class Tour {
         return tourCountry;
     }
 
-    public Habitat habitat() {
+    public Habitat getTourHabitat() {
         return tourHabitat;
     }
 
-    public Region region() {
+    public Region getTourRegion() {
         return tourRegion;
     }
 
     public Tour() {
     }
 
-    public Tour(String tourName, String tourDescription, Country country, Region region, Habitat habitat, Bird... birds) {
+    public Tour(String tourName, String tourDescription, Country tourCountry, Region tourRegion, Habitat tourHabitat, Bird... birds) {
         this.tourName = tourName;
         this.tourDescription = tourDescription;
-        this.tourCountry = country;
-        this.tourRegion = region;
-        this.tourHabitat = habitat;
+        this.tourCountry = tourCountry;
+        this.tourRegion = tourRegion;
+        this.tourHabitat = tourHabitat;
         this.tourBirds = new ArrayList<>(Arrays.asList(birds));
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Tour tour = (Tour) o;
-        return Objects.equals(id, tour.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Tour tour = (Tour) o;
+//        return Objects.equals(id, tour.id);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id);
+//
+//    }
 }

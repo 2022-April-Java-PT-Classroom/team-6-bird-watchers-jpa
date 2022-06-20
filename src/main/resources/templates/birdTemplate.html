@@ -22,11 +22,11 @@
     </nav>
 </header>
 
-<h2 th:text="${bird.name}">Bird</h2>
+<h2 th:text="${bird.birdName}">Bird</h2>
 
-<img th:src="@{../images/birds/{name}.jpg(name=${bird.name})}">
+<img th:src="@{../images/birds/{birdName}.jpg(name=${bird.birdName})}">
 
-<p th:text="${bird.description}">Description</p>
+<p th:text="${bird.birdDescription}">Description</p>
 
 <div id="return">
     <a href="index.html">Return Home</a>
