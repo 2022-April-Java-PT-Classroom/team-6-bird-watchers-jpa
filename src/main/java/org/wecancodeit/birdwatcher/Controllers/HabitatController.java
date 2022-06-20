@@ -22,8 +22,8 @@ public class HabitatController {
     }
 
     @RequestMapping("/habitat/{id}")
-    public String displaySingleHabitatById(@PathVariable Long id, Model model){
-    model.addAttribute("Habitat", habitatRepo.findById(id));
+    public String displaySingleHabitatById(@PathVariable long id, Model model){
+    model.addAttribute("habitat", habitatRepo.findById(id));
     return "habitatTemplate";
     }
 
