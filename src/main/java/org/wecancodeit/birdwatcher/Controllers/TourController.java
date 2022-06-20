@@ -21,7 +21,7 @@ public class TourController {
     }
 
     @RequestMapping("/tour/{id}")
-    public String displaySingleTourById(@PathVariable Long id, Model model){
+    public String displaySingleTourById(@PathVariable long id, Model model){
     model.addAttribute("tour", tourRepository.findById(id));
     return "tourTemplate";
     }
