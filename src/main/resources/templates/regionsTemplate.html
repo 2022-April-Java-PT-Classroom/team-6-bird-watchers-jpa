@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Habitats</title>
+    <title>Regions</title>
 </head>
 <body>
 
@@ -33,11 +33,11 @@
     </nav>
 </header>
 
-<h2>List of Habitats</h2>
+<h2>List of Regions</h2>
 
 <ul class="center-list">
-    <li th:each="habitat:${habitats}">
-        <a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}" target="_blank">Habitats</a>
+    <li th:each="region:${regions}">
+        <a th:href="@{/region(id=${region.id})}" th:text="${region.regionName}" target="_blank">Regions</a>
     </li>
 </ul>
 
