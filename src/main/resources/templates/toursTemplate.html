@@ -11,6 +11,7 @@
         <title>JAC Enterprises Tours</title>
     </head>
 
+    <body>
     <header>
 
         <nav class="navbar">
@@ -35,8 +36,6 @@
             </ul>
         </nav>
     </header>
-
-    <body>
         <section class="top_container">
             <div class="feature">
                 <h1 class="feature_txt">
@@ -56,12 +55,18 @@
 
         </section>
 
-    </body>
+    <ul>
+        <li th:each="tour:${Tours}">
+            <a th:href="@{'tours/' + ${tour.id}}" th:text="${tour.tourName}" target="_blank">Tour</a>
+        </li>
+    </ul>
 
     <footer>
         <p>&copy JAC Enterprises | <a href="../pages/terms-and-conditions.html" class="terms_conditions">Terms &
-                Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+            Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
             Reserved.</p>
     </footer>
+
+    </body>
 
 </html>

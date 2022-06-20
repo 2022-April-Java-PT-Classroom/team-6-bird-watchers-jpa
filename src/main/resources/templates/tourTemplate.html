@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <meta charset="UTF-8">
     <title>Tour</title>
 </head>
@@ -41,7 +41,7 @@ based on how back end is likely to code this (and for
 simplicity's sake right now). Link might need altering.
 -->
 <ul>
-    <li th:each="bird:${tour.tourBirds}">
+    <li th:each="bird:${Bird}">
         <a th:href="@{'birds/' + $bird.id}}" th:text="${bird.birdName}" target="_blank">Bird</a>
     </li>
 </ul>
