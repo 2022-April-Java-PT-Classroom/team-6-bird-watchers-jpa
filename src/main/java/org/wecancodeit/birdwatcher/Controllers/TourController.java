@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.wecancodeit.birdwatcher.Repositories.TourRepository;
 
 import javax.annotation.Resource;
@@ -19,37 +20,43 @@ public class TourController {
     return "toursTemplate";
     }
 
-    @RequestMapping("/tours/{tourName}")
+    @RequestMapping("/tour/{id}")
+    public String displaySingleTour(@RequestParam(value="id") Long id, Model model){
+    model.addAttribute("Tour", tourRepository.findById(id));
+    return "tourTemplate";
+    }
+
+    @RequestMapping("/tour/{tourName}")
     public String displaySingleTourByName(@PathVariable String tourName, Model model){
     model.addAttribute("Tour", tourRepository.findByTourName(tourName));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{tourDescription}")
+    @RequestMapping("/tour/{tourDescription}")
     public String displaySingleTourByDescription(@PathVariable String tourDescription, Model model){
     model.addAttribute("Tour", tourRepository.findByTourDescription(tourDescription));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{tourCountry}")
+    @RequestMapping("/tour/{tourCountry}")
     public String displaySingleTourByCountry(@PathVariable String tourCountry, Model model){
     model.addAttribute("Tour", tourRepository.findByTourCountry(tourCountry));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{tourRegion}")
+    @RequestMapping("/tour/{tourRegion}")
     public String displaySingleTourByRegion(@PathVariable String tourRegion, Model model){
     model.addAttribute("Tour", tourRepository.findByTourRegion(tourRegion));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{tourHabitat}")
+    @RequestMapping("/tour/{tourHabitat}")
     public String displaySingleTourByHabitat(@PathVariable String tourHabitat, Model model){
     model.addAttribute("Tour", tourRepository.findByTourHabitat(tourHabitat));
     return "tourTemplate";
     }
 
-    @RequestMapping("/tours/{tourBirds}")
+    @RequestMapping("/tour/{tourBirds}")
     public String displaySingleTourByBirds(@PathVariable String tourBirds, Model model){
     model.addAttribute("Tour", tourRepository.findByTourBirds(tourBirds));
     return "tourTemplate";

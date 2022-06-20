@@ -41,8 +41,8 @@ based on how back end is likely to code this (and for
 simplicity's sake right now). Link might need altering.
 -->
 <ul>
-    <li th:each="bird:${tour.tourBirds}">
-        <a th:href="@{'birds/' + $bird.id}}" th:text="${bird.birdName}" target="_blank">Bird</a>
+    <li th:each="tour:${Tours}">
+        <a th:href="@{/tour(id=${tour.id})}" th:text="${tour.tourName}" target="_blank">Tour</a>
     </li>
 </ul>
 

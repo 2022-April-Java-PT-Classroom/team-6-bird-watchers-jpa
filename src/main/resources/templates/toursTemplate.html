@@ -4,18 +4,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JAC Enterprises Tours</title>
     </head>
-
+    <body>
     <header>
 
         <nav class="navbar">
 
-            <img src="../static/images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+            <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
             <div class="searchbar">
                 <form th:action="@{/}">
                     Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
@@ -28,40 +28,40 @@
             <ul class="nav_list">
                 <li class="nav_searchbar">
                 </li>
-                <li><a href="../static/pages/index.html" class="nav_home_link">Home</a></li>
-                <li><a href="../templates/toursTemplate.html" class="nav_tours_link">Tours</a></li>
-                <li><a href="../static/pages/about.html" class="nav_about_link">About</a></li>
-                <li><a href="../static/pages/faq.html" class="nav_faq_link">Faq</a></li>
+                <li><a href="..//" class="nav_home_link">Home</a></li>
+                <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+                <li><a href="../about" class="nav_about_link">About</a></li>
+                <li><a href="../faq" class="nav_faq_link">Faq</a></li>
             </ul>
         </nav>
     </header>
 
-    <body>
+
         <section class="top_container">
             <div class="feature">
                 <h1 class="feature_txt">
                     Tours
                 </h1>
-                <img src="../static/images/tours_feature_img.jpg" alt="" class="tours_feature_img">
+                <img src="../images/tours_feature_img.jpg" alt="" class="tours_feature_img">
             </div>
         </section>
 
         <section class="middle_container_tours">
-            <img src="../static/images/skywalk_tour_img.jpg" alt="" class="feature_imgs_sky">
-            <img src="../static/images/riverboat_tour_img.jpg" alt="" class="feature_imgs">
-            <img src="../static/images/hike_tour_img.jpg" alt="" class="feature_imgs">
+            <img src="../images/skywalk_tour_img.jpg" alt="" class="feature_imgs_sky">
+            <img src="../images/riverboat_tour_img.jpg" alt="" class="feature_imgs">
+            <img src="../images/hike_tour_img.jpg" alt="" class="feature_imgs">
         </section>
 
         <section class="bottom_container">
 
         </section>
 
-    </body>
+
 
     <footer>
-        <p>&copy JAC Enterprises | <a href="../pages/terms-and-conditions.html" class="terms_conditions">Terms &
+        <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
                 Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
             Reserved.</p>
     </footer>
-
+    </body>
 </html>
