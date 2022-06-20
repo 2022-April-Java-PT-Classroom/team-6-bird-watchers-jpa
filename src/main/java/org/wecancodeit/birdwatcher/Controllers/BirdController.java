@@ -16,21 +16,21 @@ public class BirdController {
     @Resource
     private BirdRepository birdRepository;
 
-    @RequestMapping("/bird")
+    @RequestMapping("/birds")
     public String displayAllBirds(Model model){
-    model.addAttribute("Bird", birdRepository.findAll());
-    return "birdTemplate";
+    model.addAttribute("birds", birdRepository.findAll());
+    return "birdsTemplate";
     }
 
     @RequestMapping("/bird/{id}")
     public String displaySingleBirdById(@PathVariable Long id, Model model){
-    model.addAttribute("Bird", birdRepository.findById(id));
+    model.addAttribute("bird", birdRepository.findById(id));
     return "birdTemplate";
     }
 
     @RequestMapping("/bird/{birdName}")
     public String displaySingleBirdByName(@PathVariable String birdName, Model model){
-    model.addAttribute("Bird", birdRepository.findByBirdName(birdName));
+    model.addAttribute("bird", birdRepository.findByBirdName(birdName));
     return "birdTemplate";
     }
 

@@ -101,6 +101,11 @@ ul {
   display: inline;
 }
 
+.birds {
+  text-align: center;
+  text-decoration: none;
+}
+
 #return {
   text-align: center;
   padding: 10px;

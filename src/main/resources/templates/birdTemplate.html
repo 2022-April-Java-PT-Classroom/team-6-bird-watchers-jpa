@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>FAQ</title>
+    <title>Bird</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <h2 th:text="${bird.birdName}">Bird</h2>
 
-<img th:src="@{../images/birds/{birdName}.jpg(name=${bird.birdName})}">
+<!--<img th:src="@{../images/birds/{birdName}.jpg(name=${bird.birdName})}">-->
 
 <p th:text="${bird.birdDescription}">Description</p>
 
