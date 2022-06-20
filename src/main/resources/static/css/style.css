@@ -101,9 +101,9 @@ ul {
   display: inline;
 }
 
-.birds {
+.center-list {
   text-align: center;
-  text-decoration: none;
+  list-style: none;
 }
 
 #return {

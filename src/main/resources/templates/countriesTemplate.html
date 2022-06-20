@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Birds</title>
+    <title>Countries</title>
 </head>
 <body>
 
@@ -33,11 +33,11 @@
     </nav>
 </header>
 
-<h2>List of Birds</h2>
+<h2>List of Countries</h2>
 
 <ul class="center-list">
-    <li th:each="bird:${birds}">
-        <a th:href="@{/bird(id=${bird.id})}" th:text="${bird.birdName}" target="_blank">Bird</a>
+    <li th:each="country:${countries}">
+        <a th:href="@{/country(id=${country.id})}" th:text="${country.countryName}" target="_blank">Countries</a>
     </li>
 </ul>
 

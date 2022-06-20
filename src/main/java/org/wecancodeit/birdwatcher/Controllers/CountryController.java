@@ -14,10 +14,10 @@ public class CountryController {
     @Resource
     private CountryRepository countryRepository;
 
-    @RequestMapping("/country")
+    @RequestMapping("/countries")
     public String displayAllCountries(Model model){
-    model.addAttribute("Country", countryRepository.findAll());
-    return "countryTemplate";
+    model.addAttribute("countries", countryRepository.findAll());
+    return "countriesTemplate";
     }
 
     @RequestMapping("/country/{id}")
