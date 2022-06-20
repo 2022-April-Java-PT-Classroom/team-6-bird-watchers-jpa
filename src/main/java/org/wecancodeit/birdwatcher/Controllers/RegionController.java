@@ -13,21 +13,21 @@ public class RegionController {
     @Resource
     private RegionRepository regionRepository;
 
-    @RequestMapping("/region")
+    @RequestMapping("/regions")
     public String displayAllRegions(Model model){
-    model.addAttribute("Region", regionRepository.findAll());
-    return "regionTemplate";
+    model.addAttribute("regions", regionRepository.findAll());
+    return "regionsTemplate";
     }
 
     @RequestMapping("/region/{id}")
-    public String displaySingleRegionById(@PathVariable Long id, Model model){
-    model.addAttribute("Region", regionRepository.findById(id));
+    public String displaySingleRegionById(@PathVariable long id, Model model){
+    model.addAttribute("region", regionRepository.findById(id));
     return "regionTemplate";
     }
-
-    @RequestMapping("/region/{regionName}")
-    public String displaySingleRegionByName(@PathVariable String regionName, Model model){
-    model.addAttribute("Region", regionRepository.findByRegionName(regionName));
-    return "regionTemplate";
-    }
+//
+//    @RequestMapping("/region/{regionName}")
+//    public String displaySingleRegionByName(@PathVariable String regionName, Model model){
+//    model.addAttribute("Region", regionRepository.findByRegionName(regionName));
+//    return "regionTemplate";
+//    }
 }

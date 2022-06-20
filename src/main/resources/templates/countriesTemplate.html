@@ -4,10 +4,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Tour</title>
+    <title>Countries</title>
 </head>
 <body>
-
 
 <header>
 
@@ -34,16 +33,19 @@
     </nav>
 </header>
 
+<h2>List of Countries</h2>
 
-<h2 th:text="${tour.tourName}">Tour Name</h2>
-
-<p th:text="${tour.tourDescription}">Description</p>
-
-<!--<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">-->
+<ul class="center-list">
+    <li th:each="country:${countries}">
+        <a th:href="@{'/country/' + ${country.id}}" th:text="${country.countryName}" target="_blank">Countries</a>
+    </li>
+</ul>
 
 <div id="return">
     <a href="index.html">Return Home</a>
 </div>
+
+<hr>
 
 <footer>
     <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>

@@ -101,6 +101,11 @@ ul {
   display: inline;
 }
 
+.center-list {
+  text-align: center;
+  list-style: none;
+}
+
 #return {
   text-align: center;
   padding: 10px;

@@ -15,21 +15,21 @@ public class HabitatController {
     @Resource
     private HabitatRepository habitatRepo;
 
-    @RequestMapping("/habitat")
+    @RequestMapping("/habitats")
     public String displayAllHabitats(Model model){
-        model.addAttribute("Habitat", habitatRepo.findAll());
-        return "habitatTemplate";
+        model.addAttribute("habitats", habitatRepo.findAll());
+        return "habitatsTemplate";
     }
 
     @RequestMapping("/habitat/{id}")
-    public String displaySingleHabitatById(@PathVariable Long id, Model model){
-    model.addAttribute("Habitat", habitatRepo.findById(id));
+    public String displaySingleHabitatById(@PathVariable long id, Model model){
+    model.addAttribute("habitat", habitatRepo.findById(id));
     return "habitatTemplate";
     }
 
-    @RequestMapping("/habitat/{habitatName}")
-    public String displaySingleHabitatByName(@PathVariable String habitatName, Model model){
-        model.addAttribute("Habitat", habitatRepo.findByHabitatName(habitatName));
-        return "habitatTemplate";
-    }
+//    @RequestMapping("/habitat/{habitatName}")
+//    public String displaySingleHabitatByName(@PathVariable String habitatName, Model model){
+//        model.addAttribute("Habitat", habitatRepo.findByHabitatName(habitatName));
+//        return "habitatTemplate";
+//    }
 }

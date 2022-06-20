@@ -16,33 +16,33 @@ public class BirdController {
     @Resource
     private BirdRepository birdRepository;
 
-    @RequestMapping("/bird")
+    @RequestMapping("/birds")
     public String displayAllBirds(Model model){
-    model.addAttribute("Bird", birdRepository.findAll());
-    return "birdTemplate";
+    model.addAttribute("birds", birdRepository.findAll());
+    return "birdsTemplate";
     }
 
     @RequestMapping("/bird/{id}")
-    public String displaySingleBirdById(@PathVariable Long id, Model model){
-    model.addAttribute("Bird", birdRepository.findById(id));
+    public String displaySingleBirdById(@PathVariable long id, Model model){
+    model.addAttribute("bird", birdRepository.findById(id));
     return "birdTemplate";
     }
-
-    @RequestMapping("/bird/{birdName}")
-    public String displaySingleBirdByName(@PathVariable String birdName, Model model){
-    model.addAttribute("Bird", birdRepository.findByBirdName(birdName));
-    return "birdTemplate";
-    }
-
-    @RequestMapping("/bird/{birdType}")
-    public String displayBirdsByBirdType(@PathVariable String birdType, Model model){
-    model.addAttribute("Bird", birdRepository.findByBirdType(birdType));
-    return "birdTemplate";
-    }
-
-    @RequestMapping("/bird/{birdOrder}")
-    public String displayBirdsByBirdOrder(@PathVariable String birdOrder, Model model){
-    model.addAttribute("Bird", birdRepository.findByBirdOrder(birdOrder));
-    return "birdTemplate";
-    }
+//
+//    @RequestMapping("/bird/{birdName}")
+//    public String displaySingleBirdByName(@PathVariable String birdName, Model model){
+//    model.addAttribute("bird", birdRepository.findByBirdName(birdName));
+//    return "birdTemplate";
+//    }
+//
+//    @RequestMapping("/bird/{birdType}")
+//    public String displayBirdsByBirdType(@PathVariable String birdType, Model model){
+//    model.addAttribute("Bird", birdRepository.findByBirdType(birdType));
+//    return "birdTemplate";
+//    }
+//
+//    @RequestMapping("/bird/{birdOrder}")
+//    public String displayBirdsByBirdOrder(@PathVariable String birdOrder, Model model){
+//    model.addAttribute("Bird", birdRepository.findByBirdOrder(birdOrder));
+//    return "birdTemplate";
+//    }
 }
