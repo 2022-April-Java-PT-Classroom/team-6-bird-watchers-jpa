@@ -20,8 +20,14 @@ public class CountryController {
     return "countryTemplate";
     }
 
+    @RequestMapping("/country/{id}")
+    public String displaySingleCountryById(@PathVariable Long id, Model model){
+    model.addAttribute("Country", countryRepository.findById(id));
+    return "countryTemplate";
+    }
+
     @RequestMapping("/country/{countryName}")
-    public String displaySingleCountry(@PathVariable String countryName, Model model){
+    public String displaySingleCountryByName(@PathVariable String countryName, Model model){
     model.addAttribute("Country", countryRepository.findByCountryName(countryName));
     return "countryTemplate";
     }
