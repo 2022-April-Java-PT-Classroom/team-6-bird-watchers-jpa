@@ -23,7 +23,7 @@ public class BirdController {
     }
 
     @RequestMapping("/bird/{id}")
-    public String displaySingleBirdById(@PathVariable Long id, Model model){
+    public String displaySingleBirdById(@PathVariable long id, Model model){
     model.addAttribute("bird", birdRepository.findById(id));
     return "birdTemplate";
     }

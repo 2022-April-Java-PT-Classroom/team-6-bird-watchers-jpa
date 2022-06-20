@@ -22,11 +22,14 @@
     </nav>
 </header>
 
-<!--<h2 th:text="${bird.birdName}">Bird</h2>-->
+<h2 th:text="${bird.birdName}">Bird</h2>
 
-<!--&lt;!&ndash;<img th:src="@{../images/birds/{birdName}.jpg(name=${bird.birdName})}">&ndash;&gt;-->
-
-<!--<p th:text="${bird.birdDescription}">Description</p>-->
+<ul class="center-list">
+    <li>Bird type:</li>
+    <li th:text="${bird.birdType}"></li>
+    <li>Bird Order:</li>
+    <li th:text="${bird.birdOrder}"></li>
+</ul>
 
 <div id="return">
     <a href="index.html">Return Home</a>
