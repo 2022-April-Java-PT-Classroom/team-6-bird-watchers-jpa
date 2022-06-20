@@ -37,15 +37,9 @@
 
 <h2 th:text="${tour.tourName}">Tour Name</h2>
 
-<p th:text="${tour.tourDescription}">Description</p>
+<!--<p th:text="${tour.tourDescription}">Description</p>-->
 
-<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">
-
-<ul>
-    <li th:each="tour:${Tours}">
-        <a th:href="@{/tour(id=${tour.id})}" th:text="${tour.tourName}" target="_blank">Tour</a>
-    </li>
-</ul>
+<!--<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">-->
 
 <div id="return">
     <a href="index.html">Return Home</a>

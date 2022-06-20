@@ -56,6 +56,11 @@
 
         </section>
 
+    <ul class="center-list">
+        <li th:each="tour:${tours}">
+            <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}" target="_blank">Tour</a>
+        </li>
+    </ul>
 
 
     <footer>

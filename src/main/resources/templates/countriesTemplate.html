@@ -37,7 +37,7 @@
 
 <ul class="center-list">
     <li th:each="country:${countries}">
-        <a th:href="@{/country(id=${country.id})}" th:text="${country.countryName}" target="_blank">Countries</a>
+        <a th:href="@{'/country/' + ${country.id}}" th:text="${country.countryName}" target="_blank">Countries</a>
     </li>
 </ul>
 

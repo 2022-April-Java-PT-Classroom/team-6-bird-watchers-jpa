@@ -37,7 +37,7 @@
 
 <ul class="center-list">
     <li th:each="habitat:${habitats}">
-        <a th:href="@{/habitat(id=${habitat.id})}" th:text="${habitat.habitatName}" target="_blank">Habitats</a>
+        <a th:href="@{'/habitat/' + ${habitat.id}}" th:text="${habitat.habitatName}" target="_blank">Habitats</a>
     </li>
 </ul>
 

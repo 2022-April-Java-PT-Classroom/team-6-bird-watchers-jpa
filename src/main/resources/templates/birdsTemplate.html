@@ -37,7 +37,7 @@
 
 <ul class="center-list">
     <li th:each="bird:${birds}">
-        <a th:href="@{/bird(id=${bird.id})}" th:text="${bird.birdName}" target="_blank">Birds</a>
+        <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.birdName}" target="_blank">Birds</a>
     </li>
 </ul>
 
