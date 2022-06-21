@@ -9,12 +9,18 @@
 table img {
   max-width: 165px;
   max-height: 165px;
-  border: 1px solid #23272a;
+  border: 3px double #23272a;
 }
 
 table {
-  max-width: 100%;
+  max-width: 45%;
   table-layout: fixed;
-  border: 1px solid #FFB72B;
+  border: none;
   margin: 20px;
+}
+
+th+td {
+  text-decoration: underline overline solid #23272a;
+  font-weight: bold;
+  text-align: center;
 }

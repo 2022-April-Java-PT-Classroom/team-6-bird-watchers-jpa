@@ -3,28 +3,31 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tour.css">
     <meta charset="UTF-8">
     <title>Tour</title>
 </head>
 <body>
-
 
 <header>
 
     <nav class="navbar">
 
         <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-        <div class="searchbar">
-            <form th:action="@{/}">
-                Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-                &nbsp;
-                <input type="submit" value="Search" />
-                &nbsp;
-                <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-            </form>
-        </div>
+
         <ul class="nav_list">
             <li class="nav_searchbar">
+            </li>
+            <li>
+                <div class="searchbar">
+                    <form th:action="@{/}">
+                        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+                        &nbsp;
+                        <input type="submit" value="Search" />
+                        &nbsp;
+                        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                    </form>
+                </div>
             </li>
             <li><a href="..//" class="nav_home_link">Home</a></li>
             <li><a href="../tours" class="nav_tours_link">Tours</a></li>
@@ -37,13 +40,29 @@
 
 <h2 th:text="${tour.tourName}">Tour Name</h2>
 
-<p th:text="${tour.tourDescription}">Description</p>
+<img th:src="${'../images/tours/' + tour.id + '.png'}" class="center-image">
 
-<!--<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">-->
+<p th:text="${tour.tourDescription}" class="center-text">Description</p>
+
+<ul class="center-list">
+    <li><h4>Birds on this tour:</h4></li>
+    <li th:each="bird:${tour.tourBirds}">
+        <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.birdName}" target="_blank">Birds</a>
+    </li>
+</ul>
+
+<h4>Country, Region, and Habitat:</h4>
+<p th:text="${tour.tourCountry.countryName}" class="center-text"></p>
+<p th:text="${tour.tourRegion.regionName}" class="center-text"></p>
+<p th:text="${tour.tourHabitat.habitatName}" class="center-text"></p>
+
+<h5 class="center-text">To reserve a tour, please call us at 555-555-5555</h5>
 
 <div id="return">
-    <a href="index.html">Return Home</a>
+    <a href="/">Return Home</a>
 </div>
+
+<hr>
 
 <footer>
     <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>

@@ -15,17 +15,20 @@
   <nav class="navbar">
 
     <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-    <div class="searchbar">
-      <form th:action="@{/}">
-        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-        &nbsp;
-        <input type="submit" value="Search" />
-        &nbsp;
-        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-      </form>
-    </div>
+
     <ul class="nav_list">
       <li class="nav_searchbar">
+      </li>
+      <li>
+        <div class="searchbar">
+          <form th:action="@{/}">
+            Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+            &nbsp;
+            <input type="submit" value="Search" />
+            &nbsp;
+            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+          </form>
+        </div>
       </li>
       <li><a href="..//" class="nav_home_link">Home</a></li>
       <li><a href="../tours" class="nav_tours_link">Tours</a></li>
@@ -35,17 +38,21 @@
   </nav>
 </header>
 
-  <h2>About Us</h2>
+  <h1 class="feature_txt">About Us</h1>
 
   <section class="container">
     <table>
       <th>
-      <td>Dhana Acharya</td>
+      <td clas>Dhana Acharya</td>
       </th>
       <tr>
         <td><img src="../images/developers/dhana.png"></td>
         <td>
-          DHANA WRITE YOUR BIO HERE
+          Hi! My name is Dhana P Acharya. I literally started from zero when first started coding in 2020.
+          And, now I have more inclination to coding. My passion for coding has dismantled the world
+          of obstacles that appeared on my way. All I do during my free time is coding or watching video
+          related to coding. I am still crawling though ,but I am sure that one day,my firm determination can
+          lead to walk into the world coding.
         </td>
       </tr>
     </table>
@@ -137,7 +144,7 @@
   </section>
 
   <div id="return">
-    <a href="index.html">Return Home</a>
+    <a href="/">Return Home</a>
   </div>
 
   <hr>
