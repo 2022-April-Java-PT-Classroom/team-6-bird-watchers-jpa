@@ -50,21 +50,21 @@ public class Populator implements CommandLineRunner {
         Habitat river = new Habitat("River");
         habitatRepository.save(river);
 
-        Bird toucan = new Bird("Toucan", "frugivorous", "Piciformes");
+        Bird toucan = new Bird("Toucan", "Frugivorous", "Piciformes");
         birdRepository.save(toucan);
-        Bird macaw = new Bird("Macaw", "omnivorous", "Psittaciformes");
+        Bird macaw = new Bird("Macaw", "Omnivorous", "Psittaciformes");
         birdRepository.save(macaw);
-        Bird harpyEagle = new Bird("Harpy Eagle", "carnivorous", "Accipitriformes");
+        Bird harpyEagle = new Bird("Harpy Eagle", "Carnivorous", "Accipitriformes");
         birdRepository.save(harpyEagle);
-        Bird kingVulture = new Bird("King Vulture", "carrion-eater", "Acciptitriformes");
+        Bird kingVulture = new Bird("King Vulture", "Carrion-eater", "Acciptitriformes");
         birdRepository.save(kingVulture);
-        Bird hoatzin = new Bird("Hoatzin", "folivore", "Opisthocomiformes");
+        Bird hoatzin = new Bird("Hoatzin", "Folivore", "Opisthocomiformes");
         birdRepository.save(hoatzin);
         birdRepository.findAll();
 
         Tour toucantisRiverTour = new Tour("Toucantis River Tour", "Paddle down the Amazon River to observe the birds feeding and nesting", brazil, toucantis, river, toucan);
         tourRepository.save(toucantisRiverTour);
-        Tour amazonasRainforestTour = new Tour("Amazonas Rainforest Tour", "Expolore the rainforest taking in the sights and sounds", brazil, amazonas, rainforest, harpyEagle);
+        Tour amazonasRainforestTour = new Tour("Amazonas Rainforest Tour", "Explore the rainforest taking in the sights and sounds", brazil, amazonas, rainforest, harpyEagle);
         tourRepository.save(amazonasRainforestTour);
         Tour amazonasSkywalkTour = new Tour("Amazonas Skywalk Tour", "Walk among the treetops and observe the birds nesting and flying about", brazil, amazonas, canopy, kingVulture);
         tourRepository.save(amazonasSkywalkTour);

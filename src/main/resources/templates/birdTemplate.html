@@ -35,15 +35,17 @@
 
 <h2 th:text="${bird.birdName}">Bird</h2>
 
+<img th:src="${'../images/birds/' + bird.id + '.png'}" class="center-image">
+
 <ul class="center-list">
-    <li>Bird type:</li>
+    <li class="underline">Bird Type</li>
     <li th:text="${bird.birdType}"></li>
-    <li>Bird Order:</li>
+    <li class="underline">Bird Order</li>
     <li th:text="${bird.birdOrder}"></li>
 </ul>
 
 <div id="return">
-    <a href="index.html">Return Home</a>
+    <a href="/">Return Home</a>
 </div>
 
 <hr>
