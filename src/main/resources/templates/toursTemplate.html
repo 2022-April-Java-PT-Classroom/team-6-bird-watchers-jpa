@@ -42,25 +42,23 @@
                 <h1 class="feature_txt">
                     Tours
                 </h1>
-                <img src="../images/tours_feature_img.jpg" alt="" class="tours_feature_img">
+                <img src="../images/hike_tour_img.jpg" alt="" class="tours_feature_img">
             </div>
-        </section>
-
-        <section class="middle_container_tours">
-            <img src="../images/skywalk_tour_img.jpg" alt="" class="feature_imgs_sky">
-            <img src="../images/riverboat_tour_img.jpg" alt="" class="feature_imgs">
-            <img src="../images/hike_tour_img.jpg" alt="" class="feature_imgs">
         </section>
 
         <section class="bottom_container">
 
         </section>
 
+    <h4>Current Available Tours:</h4>
+
     <ul class="center-list">
         <li th:each="tour:${tours}">
             <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}" target="_blank">Tour</a>
         </li>
     </ul>
+
+    <br>
 
     <hr>
 
