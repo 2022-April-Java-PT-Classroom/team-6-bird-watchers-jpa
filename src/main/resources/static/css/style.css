@@ -111,6 +111,10 @@ ul {
   display: block;
 }
 
+.center-text, h4 {
+  text-align: center;
+}
+
 .underline {
   text-decoration: underline;
 }

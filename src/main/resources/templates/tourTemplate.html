@@ -37,13 +37,26 @@
 
 <h2 th:text="${tour.tourName}">Tour Name</h2>
 
-<p th:text="${tour.tourDescription}">Description</p>
+<img th:src="${'../images/tours/' + tour.id + '.png'}" class="center-image">
 
-<!--<img th:src="@{../images/tours/{name}.jpg(name=${tour.name})}">-->
+<p th:text="${tour.tourDescription}" class="center-text">Description</p>
+
+<h4>Birds on this tour:</h4>
+<ul class="center-list">
+    <li th:each="bird:${tour.tourBirds}">
+        <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.birdName}" target="_blank">Birds</a>
+    </li>
+</ul>
+
+<h4>Country and Habitat:</h4>
+<p th:text="${tour.tourCountry.countryName}" class="center-text"></p>
+<p th:text="${tour.tourHabitat.habitatName}" class="center-text"></p>
 
 <div id="return">
-    <a href="index.html">Return Home</a>
+    <a href="/">Return Home</a>
 </div>
+
+<hr>
 
 <footer>
     <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
