@@ -15,17 +15,20 @@
   <nav class="navbar">
 
     <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-    <div class="searchbar">
-      <form th:action="@{/}">
-        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-        &nbsp;
-        <input type="submit" value="Search" />
-        &nbsp;
-        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-      </form>
-    </div>
+
     <ul class="nav_list">
       <li class="nav_searchbar">
+      </li>
+      <li>
+        <div class="searchbar">
+          <form th:action="@{/}">
+            Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+            &nbsp;
+            <input type="submit" value="Search" />
+            &nbsp;
+            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+          </form>
+        </div>
       </li>
       <li><a href="..//" class="nav_home_link">Home</a></li>
       <li><a href="../tours" class="nav_tours_link">Tours</a></li>
@@ -35,7 +38,7 @@
   </nav>
 </header>
 
-  <h2>About Us</h2>
+  <h1 class="feature_txt">About Us</h1>
 
   <section class="container">
     <table>
