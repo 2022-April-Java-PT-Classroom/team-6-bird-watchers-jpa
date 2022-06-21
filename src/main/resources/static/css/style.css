@@ -11,6 +11,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  width: 70%;
+  margin: auto;
+}
+
 header {
   margin: 0;
 
@@ -94,7 +99,7 @@ footer {
 }
 
 hr {
-  border-color: var(--green);
+  border-color: var(--black);
 }
 
 ul {

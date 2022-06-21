@@ -13,8 +13,14 @@ table img {
 }
 
 table {
-  max-width: 100%;
+  max-width: 45%;
   table-layout: fixed;
   border: 1px solid #FFB72B;
   margin: 20px;
+}
+
+th+td {
+  text-decoration: underline overline solid #B5FE83;
+  font-weight: bold;
+  text-align: center;
 }
