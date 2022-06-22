@@ -21,7 +21,7 @@ table {
 }
 
 th+td {
-  text-decoration: underline overline solid #23272a;
+  text-decoration: underline solid #23272a;
   font-weight: bold;
   text-align: center;
 }
