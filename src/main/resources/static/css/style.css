@@ -80,7 +80,7 @@ ul {
   display: inline;
 }
 
-p, .format-width {
+p {
   width: 80%;
   margin: auto;
   padding: 10px;

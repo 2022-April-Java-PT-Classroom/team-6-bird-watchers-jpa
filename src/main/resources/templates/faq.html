@@ -18,7 +18,8 @@
             <li>
                 <div class="searchbar">
                     <form th:action="@{/}">
-                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here" th:value="${keyword}"
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here"
+                               th:value="${keyword}"
                                required/>
                         <input type="submit" value="Search" id="search-button"/>
                     </form>
@@ -41,22 +42,28 @@
     </div>
 </section>
 
-<ul class="center-list format-width">
+<ul class="center-list">
     <li>
         <h4>What do I need to bring to a tour?</h4>
-        Please bring your tour confirmation ticket along with snacks and water.
-        Any special equipment you might need is provided by us, but you are
-        welcome to bring your own.
+        <p>
+            Please bring your tour confirmation ticket along with snacks and water.
+            Any special equipment you might need is provided by us, but you are
+            welcome to bring your own.
+        </p>
     </li>
     <li>
         <h4>What forms of payment do you accept?</h4>
-        We accept all major credit cards, electronic check, and Paypal.
-        If you would like to set up a payment plan, please contact us at
-        555-555-5555 to connect with a customer service representative.
+        <p>
+            We accept all major credit cards, electronic check, and Paypal.
+            If you would like to set up a payment plan, please contact us at
+            555-555-5555 to connect with a customer service representative.
+        </p>
     </li>
     <li>
         <h4>May I take a bird home with me?</h4>
-        No.
+        <p>
+            No.
+        </p>
     </li>
 </ul>
 
