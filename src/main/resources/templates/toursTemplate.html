@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style.css">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JAC Enterprises Tours</title>
-    </head>
-    <body>
-    <header>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAC Enterprises Tours</title>
+</head>
+<body>
 
-        <nav class="navbar">
+<header>
+    <nav class="navbar">
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+            </li>
+            <li>
+                <div class="searchbar">
+                    <form th:action="@{/}">
+                        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}"
+                                       required/>
+                        &nbsp;
+                        <input type="submit" value="Search"/>
+                        &nbsp;
+                        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()"/>
+                    </form>
+                </div>
+            </li>
+            <li><a href="..//" class="nav_home_link">Home</a></li>
+            <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+            <li><a href="../about" class="nav_about_link">About</a></li>
+            <li><a href="../faq" class="nav_faq_link">Faq</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+<section class="top_container">
+    <div class="amazon">
+        <h1 class="tours_text_over_image">
+            Tours
+        </h1>
+        <img src="../images/hike_tour_img.jpg" alt="" class="tours_feature_img">
+    </div>
+</section>
 
-            <ul class="nav_list">
-                <li class="nav_searchbar">
-                </li>
-                <li>
-                    <div class="searchbar">
-                        <form th:action="@{/}">
-                            Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-                            &nbsp;
-                            <input type="submit" value="Search" />
-                            &nbsp;
-                            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-                        </form>
-                    </div>
-                </li>
-                <li><a href="..//" class="nav_home_link">Home</a></li>
-                <li><a href="../tours" class="nav_tours_link">Tours</a></li>
-                <li><a href="../about" class="nav_about_link">About</a></li>
-                <li><a href="../faq" class="nav_faq_link">Faq</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-        <section class="top_container">
-            <div class="feature">
-                <h1 class="feature_txt">
-                    Tours
-                </h1>
-                <img src="../images/hike_tour_img.jpg" alt="" class="tours_feature_img">
-            </div>
-        </section>
-
-        <section class="bottom_container">
-
-        </section>
-
+<section class="bottom_container">
     <h4>Current Available Tours:</h4>
-
     <ul class="center-list">
         <li th:each="tour:${tours}">
             <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}" target="_blank">Tour</a>
         </li>
     </ul>
+</section>
 
-    <br>
+<br>
 
-    <hr>
+<hr>
 
-    <footer>
-        <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
-                Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
-            Reserved.</p>
-    </footer>
-    </body>
+<footer>
+    <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
+        Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+        Reserved.</p>
+</footer>
+
+</body>
 </html>

@@ -7,7 +7,6 @@
 }
 
 * {
-  /* background-color: var(--white); */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -21,7 +20,6 @@ body {
 
 header {
   margin: 0;
-
 }
 
 .navbar {
@@ -41,7 +39,6 @@ header {
   background-color: var(--orange);
   transition: 0.5s;
   text-transform: uppercase;
-
 }
 
 .companylogo {
@@ -52,7 +49,7 @@ header {
   width: 75px;
 }
 
-.nav_searchbar {
+.nav_searchbar, .nav_home_link, .nav_tours_link, .nav_about_link, .nav_faq_link {
   width: 100px;
   display: block;
   padding: 20px 15px;
@@ -65,40 +62,7 @@ header {
   width: 70%;
 }
 
-.nav_home_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav_tours_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav_about_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav_faq_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-h2,
-footer {
+h2, footer {
   text-align: center;
 }
 
@@ -120,7 +84,7 @@ ul {
   display: block;
 }
 
-.center-text, h4 {
+.center-text, h4, .intro, .bird_watching_info, .terms_h, .middle_container_tours {
   text-align: center;
 }
 
@@ -133,17 +97,13 @@ ul {
   padding: 10px;
 }
 
-/* homepage css */
-
-.top_container {}
-
-.amazon {
+.amazon, .bird_part {
   position: relative;
   text-align: center;
   color: var(--white);
 }
 
-.motto {
+.motto, .bird_watching, .tours_text_over_image {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -156,25 +116,6 @@ ul {
   width: 100%;
 }
 
-.intro {
-  text-align: center;
-}
-
-.bird_part {
-  position: relative;
-  text-align: center;
-  color: var(--white);
-}
-
-.bird_watching {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 70px;
-  text-shadow: 5px 5px 10px var(--black);
-}
-
 .bird_pic {
   width: 650px;
   height: 450px;
@@ -185,55 +126,20 @@ ul {
   transform: scale(1.1);
 }
 
-.bird_watching_info {
-  text-align: center;
-}
-
 .tours_part {
   justify-content: center;
   text-align: center;
 }
 
-.tours_text_over_image {
-  position: absolute;
-  /* top: 35%;
-  left: 50%; */
-  transform: translate(-50%, -50%);
-  font-size: 70px;
-  text-shadow: 5px 5px 10px var(--black);
-}
-
-.skywalk_pic_link {
+.skywalk_pic_link, .riverboat_pic_link, .hiking_pic_link {
   height: 250px;
   width: 250px;
   transition: transform .2s;
 }
 
-.skywalk_pic_link:hover {
+.skywalk_pic_link:hove, .riverboat_pic_link:hover, .hiking_pic_link:hover {
   transform: scale(1.1);
 }
-
-.riverboat_pic_link {
-  height: 250px;
-  width: 250px;
-  transition: transform .2s;
-}
-
-.riverboat_pic_link:hover {
-  transform: scale(1.1);
-}
-
-.hiking_pic_link {
-  width: 250px;
-  height: 250px;
-  transition: transform .2s;
-}
-
-.hiking_pic_link:hover {
-  transform: scale(1.1);
-}
-
-/* Terms & Conditions css */
 
 .terms_f {
   position: fixed;
@@ -243,17 +149,11 @@ ul {
   height: 40px;
 }
 
-.terms_h {
-  text-align: center;
-}
-
 .terms_list {
   list-style: decimal;
   text-align: left;
   display: inline-block;
 }
-
-/* CSS for Tours page */
 
 .feature_txt {
   text-align: center;
@@ -265,18 +165,4 @@ ul {
 .tours_feature_img {
   width: 100%;
   height: 850px;
-}
-
-.feature_imgs {
-  height: 250px;
-  width: 350px;
-}
-
-.feature_imgs_sky {
-  height: 350px;
-  width: 350px;
-}
-
-.middle_container_tours {
-  text-align: center;
 }
