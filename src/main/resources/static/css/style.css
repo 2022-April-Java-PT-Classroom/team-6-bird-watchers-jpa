@@ -11,7 +11,7 @@
 }
 
 body {
-  background-image: linear-gradient(to right, transparent, #F7F7F7, #F7F7F7, #F7F7F7, transparent), url("../images/other/leaves.jpg");
+  background-image: linear-gradient(to right, transparent, var(--white), var(--white), var(--white), transparent), url("../images/other/leaves.jpg");
   background-attachment: fixed;
   background-position: center;
   width: 65%;
@@ -36,7 +36,7 @@ header {
 }
 
 .nav_list a:hover, a:hover {
-  background-color: var(--orange);
+  background-image: radial-gradient(var(--orange), transparent, transparent);
   transition: 0.5s;
   text-transform: uppercase;
 }
@@ -162,6 +162,10 @@ ul {
 
 .circle-image {
   border-radius: 50%;
+}
+
+.border-image {
+  border: 3px double #23272a;
 }
 
 a:link, a:visited {
