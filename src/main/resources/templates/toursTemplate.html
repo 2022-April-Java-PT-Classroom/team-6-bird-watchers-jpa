@@ -48,7 +48,7 @@
 </section>
 
 <section class="bottom_container">
-    <h4>Current Available Tours:</h4>
+    <h3>Current Available Tours:</h3>
     <ul class="center-list">
         <li th:each="tour:${tours}">
             <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}">Tour</a>

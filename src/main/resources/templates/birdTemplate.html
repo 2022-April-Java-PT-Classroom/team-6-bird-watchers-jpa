@@ -39,11 +39,17 @@
 <img th:src="${'../images/birds/' + bird.id + '.png'}" class="center-image circle-image border-image">
 
 <ul class="center-list">
-    <li class="underline">Bird Type</li>
+    <li>
+        <h3>Bird Type</h3>
+    </li>
     <li th:text="${bird.birdType}"></li>
-    <li class="underline">Bird Order</li>
+    <li>
+        <h3>Bird Order</h3>
+    </li>
     <li th:text="${bird.birdOrder}"></li>
 </ul>
+
+<br>
 
 <div id="return">
     <a href="/">Return Home</a>

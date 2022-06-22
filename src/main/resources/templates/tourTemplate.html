@@ -42,13 +42,13 @@
 <p th:text="${tour.tourDescription}" class="center-text">Description</p>
 
 <ul class="center-list">
-    <li><h4>Birds on this tour:</h4></li>
+    <li><h3>Birds on this tour:</h3></li>
     <li th:each="bird:${tour.tourBirds}">
         <a th:href="@{'/bird/' + ${bird.id}}" th:text="${bird.birdName}">Birds</a>
     </li>
 </ul>
 
-<h4>Country, Region, and Habitat:</h4>
+<h3>Country, Region, and Habitat:</h3>
 <p th:text="${tour.tourCountry.countryName}" class="center-text"></p>
 <p th:text="${tour.tourRegion.regionName}" class="center-text"></p>
 <p th:text="${tour.tourHabitat.habitatName}" class="center-text"></p>
