@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAC Enterprises Terms & Conditions</title>
+    <title>Terms & Conditions | JAC Enterprises</title>
 </head>
-
 <body>
 
 <header>
-
     <nav class="navbar">
-
         <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-
         <ul class="nav_list">
             <li class="nav_searchbar">
             </li>
             <li>
                 <div class="searchbar">
                     <form th:action="@{/}">
-                        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-                        &nbsp;
-                        <input type="submit" value="Search" />
-                        &nbsp;
-                        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here" th:value="${keyword}"
+                               required/>
+                        <input type="submit" value="Search" id="search-button"/>
                     </form>
                 </div>
             </li>
@@ -42,13 +36,21 @@
     </nav>
 </header>
 
-    <h1 class="terms_h">Use of the Services</h1>
-        <div style="text-align: center">
-        <li class="terms_list">By visiting our site and booking a tour from us, you are waiving your legal rights to hold JAC Enterprises accountable for any and all types of injuries and/or death.</li> 
-        <li class="terms_list">You also allow the website to track and trace your browser, collect, use and share your location data, and track via third-party cookies for purposes including advertising.</li> 
-        <li class="terms_list">This service can delete any content, including your account, they want without reason and without prior notice.</li>
-        <li class="terms_list">This service can change the terms at any time at their discretion without notice to the user.</li>
-        </div>
+<h1 class="terms_h">Use of the Services</h1>
+<div class="center-text">
+    <li class="terms_list">By visiting our site and booking a tour from us, you are waiving your legal rights to hold
+        JAC Enterprises accountable for any and all types of injuries and/or death.
+    </li>
+    <li class="terms_list">You also allow the website to track and trace your browser, collect, use and share your
+        location data, and track via third-party cookies for purposes including advertising.
+    </li>
+    <li class="terms_list">This service can delete any content, including your account, they want without reason and
+        without prior notice.
+    </li>
+    <li class="terms_list">This service can change the terms at any time at their discretion without notice to the
+        user.
+    </li>
+</div>
 
 <div id="return">
     <a href="/">Return Home</a>
@@ -56,10 +58,11 @@
 
 <hr>
 
-<footer class="terms_f">
-    <p>&copy JAC Enterprises | <a href="../pages/terms-and-conditions.html" class="terms_conditions">Terms &
+<footer>
+    <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
         Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
         Reserved.</p>
 </footer>
+
 </body>
 </html>

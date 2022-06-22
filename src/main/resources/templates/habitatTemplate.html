@@ -2,30 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <title>Habitat</title>
 </head>
 <body>
 
-
 <header>
-
     <nav class="navbar">
-
         <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
-
         <ul class="nav_list">
             <li class="nav_searchbar">
             </li>
             <li>
                 <div class="searchbar">
                     <form th:action="@{/}">
-                        Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-                        &nbsp;
-                        <input type="submit" value="Search" />
-                        &nbsp;
-                        <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here" th:value="${keyword}"
+                               required/>
+                        <input type="submit" value="Search" id="search-button"/>
                     </form>
                 </div>
             </li>
@@ -37,10 +32,7 @@
     </nav>
 </header>
 
-
 <h2 th:text="${habitat.habitatName}">Habitat Name</h2>
-
-<!--<img th:src="@{../images/habitats/{name}.jpg(name=${habitat.name})}">-->
 
 <div id="return">
     <a href="/">Return Home</a>
@@ -49,7 +41,9 @@
 <hr>
 
 <footer>
-    <p>&copy JAC Enterprises | <a href="" class="terms_conditions">Terms & Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights Reserved.</p>
+    <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
+        Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+        Reserved.</p>
 </footer>
 
 </body>

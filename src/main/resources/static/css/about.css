@@ -7,8 +7,9 @@
 }
 
 table img {
-  max-width: 165px;
-  max-height: 165px;
+  width: 165px;
+  height: 165px;
+  object-fit: cover;
   border: 3px double #23272a;
 }
 
@@ -20,7 +21,15 @@ table {
 }
 
 th+td {
-  text-decoration: underline overline solid #23272a;
+  text-decoration: underline solid #23272a;
   font-weight: bold;
   text-align: center;
+}
+
+td div {
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-color: #23272a transparent;
+  scrollbar-width: thin;
+  background-image: linear-gradient(transparent, #FFB72B, transparent);
 }

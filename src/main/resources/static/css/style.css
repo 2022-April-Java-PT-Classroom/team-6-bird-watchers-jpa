@@ -7,12 +7,11 @@
 }
 
 * {
-  /* background-color: var(--white); */
   font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-image: linear-gradient(to right, transparent, #F7F7F7, #F7F7F7, #F7F7F7, transparent), url("../images/other/leaves.jpg");
+  background-image: linear-gradient(to right, transparent, var(--white), var(--white), var(--white), transparent), url("../images/other/leaves.jpg");
   background-attachment: fixed;
   background-position: center;
   width: 65%;
@@ -21,7 +20,6 @@ body {
 
 header {
   margin: 0;
-
 }
 
 .navbar {
@@ -35,13 +33,14 @@ header {
   margin-left: auto;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-.nav_list a:hover {
-  background-color: var(--orange);
+a:hover {
+  background-image: radial-gradient(var(--orange), transparent, transparent);
   transition: 0.5s;
   text-transform: uppercase;
-
+  transform: scale(1.1);
 }
 
 .companylogo {
@@ -52,7 +51,7 @@ header {
   width: 75px;
 }
 
-.nav_searchbar {
+.nav_searchbar, .nav_home_link, .nav_tours_link, .nav_about_link, .nav_faq_link {
   width: 100px;
   display: block;
   padding: 20px 15px;
@@ -65,41 +64,12 @@ header {
   width: 70%;
 }
 
-.nav_home_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
+h2, footer {
   text-align: center;
 }
 
-.nav_tours_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav_about_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav_faq_link {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-align: center;
-}
-
-h2,
-footer {
-  text-align: center;
+h2, th+td {
+  font-family: 'Playfair Display SC', serif;
 }
 
 hr {
@@ -108,6 +78,12 @@ hr {
 
 ul {
   display: inline;
+}
+
+p {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
 }
 
 .center-list {
@@ -120,7 +96,7 @@ ul {
   display: block;
 }
 
-.center-text, h4 {
+.center-text, p, h4, h3, .intro, .bird_watching_info, .terms_h, .middle_container_tours {
   text-align: center;
 }
 
@@ -133,46 +109,34 @@ ul {
   padding: 10px;
 }
 
-/* homepage css */
-
-.top_container {}
-
-.amazon {
+.amazon, .bird_part {
   position: relative;
   text-align: center;
   color: var(--white);
 }
 
-.motto {
+.motto, .bird_watching, .tours_text_over_image {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 70px;
   text-shadow: 5px 5px 10px var(--black);
-}
-
-.amazon_pic {
-  width: 100%;
-}
-
-.intro {
-  text-align: center;
-}
-
-.bird_part {
-  position: relative;
-  text-align: center;
-  color: var(--white);
 }
 
 .bird_watching {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 70px;
-  text-shadow: 5px 5px 10px var(--black);
+  padding-top: 100px;
+}
+
+.paradise {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+}
+
+.amazon_pic, .tours_feature_img {
+  width: 100%;
+  height: 500px;
+  border: 3px double #23272a;
 }
 
 .bird_pic {
@@ -181,59 +145,20 @@ ul {
   transition: transform .2s;
 }
 
-.bird_pic:hover {
-  transform: scale(1.1);
-}
-
-.bird_watching_info {
-  text-align: center;
-}
-
 .tours_part {
   justify-content: center;
   text-align: center;
 }
 
-.tours_text_over_image {
-  position: absolute;
-  /* top: 35%;
-  left: 50%; */
-  transform: translate(-50%, -50%);
-  font-size: 70px;
-  text-shadow: 5px 5px 10px var(--black);
-}
-
-.skywalk_pic_link {
+.skywalk_pic_link, .riverboat_pic_link, .hiking_pic_link {
   height: 250px;
   width: 250px;
   transition: transform .2s;
 }
 
-.skywalk_pic_link:hover {
+.skywalk_pic_link:hover, .riverboat_pic_link:hover, .hiking_pic_link:hover, .bird_pic:hover {
   transform: scale(1.1);
 }
-
-.riverboat_pic_link {
-  height: 250px;
-  width: 250px;
-  transition: transform .2s;
-}
-
-.riverboat_pic_link:hover {
-  transform: scale(1.1);
-}
-
-.hiking_pic_link {
-  width: 250px;
-  height: 250px;
-  transition: transform .2s;
-}
-
-.hiking_pic_link:hover {
-  transform: scale(1.1);
-}
-
-/* Terms & Conditions css */
 
 .terms_f {
   position: fixed;
@@ -243,17 +168,11 @@ ul {
   height: 40px;
 }
 
-.terms_h {
-  text-align: center;
-}
-
 .terms_list {
   list-style: decimal;
   text-align: left;
   display: inline-block;
 }
-
-/* CSS for Tours page */
 
 .feature_txt {
   text-align: center;
@@ -262,21 +181,36 @@ ul {
   margin: 0;
 }
 
-.tours_feature_img {
-  width: 100%;
-  height: 850px;
+.circle-image {
+  border-radius: 50%;
 }
 
-.feature_imgs {
-  height: 250px;
-  width: 350px;
+.border-image, #keyword {
+  border: 3px double #23272a;
 }
 
-.feature_imgs_sky {
-  height: 350px;
-  width: 350px;
+form {
+  margin-top: 15px;
 }
 
-.middle_container_tours {
-  text-align: center;
+#keyword {
+  width: 75%;
+  float: left;
+}
+
+#search-button {
+  color: var(--white);
+  background-color: var(--black);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  float: right;
+  margin-top: 2px;
+}
+
+a:link, a:visited {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform .2s;
 }

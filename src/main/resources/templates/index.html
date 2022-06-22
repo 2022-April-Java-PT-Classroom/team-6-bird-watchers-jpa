@@ -1,99 +1,96 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAC Enterprises Home</title>
+    <title>JAC Enterprises | Birdwatching in Paradise</title>
 </head>
-
 <body>
 
-    <header>
+<header>
+    <nav class="navbar">
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+            </li>
+            <li>
+                <div class="searchbar">
+                    <form th:action="@{/}">
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here" th:value="${keyword}"
+                                       required/>
+                        <input type="submit" value="Search" id="search-button"/>
+                    </form>
+                </div>
+            </li>
+            <li><a href="..//" class="nav_home_link">Home</a></li>
+            <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+            <li><a href="../about" class="nav_about_link">About</a></li>
+            <li><a href="../faq" class="nav_faq_link">Faq</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <nav class="navbar">
+<section>
+    <div class="amazon">
+        <h1 class="motto">Birdwatching in <div class="paradise">Paradise</div></h1>
+        <img class="amazon_pic" src="../images/amazon_rainforest.jpg" alt="The rainforest">
+    </div>
+    <h2 class="jac_intro">JAC Enterprises</h2>
+    <p class="intro">Join JAC Enterprises on an adventure to see some of the world's most beautiful birds
+        in one of the planet's most biodiverse regions, the Amazon River Basin. Over one thousand species of
+        birds make their home there. Our tour locations were chosen to highlight some of the area's most interesting
+        species and habitats.
+        We designed our tours to have minimal effect on the environment, and proceeds from each tour fund local
+        conservation efforts.<br><br>
 
-            <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        Our motto is, "Vincit Qui Se Vincit" which means, "One conquers who conquers oneself. You have conquered
+        yourself, and have achieved much. Now is time to enjoy the fruits of your conquest. Book today for an experience
+        you will treasure forever.</p>
+</section>
 
-            <ul class="nav_list">
-                <li class="nav_searchbar">
-                </li>
-                <li>
-                    <div class="searchbar">
-                        <form th:action="@{/}">
-                            Search: <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
-                            &nbsp;
-                            <input type="submit" value="Search" />
-                            &nbsp;
-                            <input type="button" value="Clear" id="btnClear" onclick="clearSearch()" />
-                        </form>
-                    </div>
-                </li>
-                <li><a href="..//" class="nav_home_link">Home</a></li>
-                <li><a href="../tours" class="nav_tours_link">Tours</a></li>
-                <li><a href="../about" class="nav_about_link">About</a></li>
-                <li><a href="../faq" class="nav_faq_link">Faq</a></li>
-            </ul>
-        </nav>
-    </header>
+<section>
+    <div class="bird_part">
+        <p class="bird_watching">Bird Watching</p>
+        <img src="../images/birds/birds.png" alt="Birds" class="bird_pic circle-image">
+    </div>
+    <p class="bird_watching_info">Birdwatching is the recreational observation and study of birds.
+        This activity gets millions of people around the world out of doors enjoying wildlife. Like hunting
+        and fishing, birdwatching offers the thrill of pursuing and tracking wild animals, but does so in a
+        much less intrusive way. Requiring little more than a pair of binoculars and a field guide, birdwatching
+        is possible anywhere, with birds living on all seven continents.</p>
+</section>
 
-    <section class="top_container">
-        <div class="amazon">
-            <h1 class="motto">Birdwatching In Paradise</h1>
-            <!--Bright bold white lettering over picture-->
-            <img class="amazon_pic" src="../images/amazon_rainforest.jpg" alt="Pic of rainforest">
-        </div>
-        <h2 class="jac_intro">JAC Enterprises</h2>
-        <p class="intro">Join JAC Enterprises on an adventure to see some of the world's most beautiful birds
-            in one of the planet's most biodiverse regions, the Amazon River Basin. Over one thousand species of
-            birds make their home there. Our tour locations were chosen to highlight some of the area's most interesting species and habitats.
-            We designed our tours to have minimal effect on the environment, and proceeds from each tour fund local conservation efforts.<br><br>
+<section>
+    <div class="tours_part">
+        <h2 class="tours_heading">Tour Photos</h2>
+        <a href="../images/tours/canopywalk.jpg" target="_blank">
+            <img src="../images/tours/canopywalk.jpg" alt="A canopy bridge" class="skywalk_pic_link">
+        </a>
+        <a href="../images/tours/riverhomepgpic.jpg" target="_blank">
+            <img src="../images/tours/riverhomepgpic.jpg" alt="A boat on a river" class="riverboat_pic_link">
+        </a>
+        <a href="../images/tours/hikehomepgpic.jpg" target="_blank">
+            <img src="../images/tours/hikehomepgpic.jpg" alt="A forest" class="hiking_pic_link">
+        </a>
+    </div>
+</section>
 
-            Our motto is, "Vincit Qui Se Vincit" which means, "One conquers who conquers oneself. You have conquered
-            yourself, and have achieved much. Now is time to enjoy the fruits of your conquest. Book today for an experience
-            you will treasure forever.</p>
-    </section>
+<br>
 
-    <section class="middle_container">
-        <div class="bird_part">
-            <p class="bird_watching">Bird Watching</p>
-            <img src="../images/birds/birds.png" alt="" class="bird_pic">
-        </div>
-        <p class="bird_watching_info">Birdwatching is the recreational observation and study of birds.
-            This activity gets millions of people around the world out of doors enjoying wildlife. Like hunting
-            and fishing, birdwatching offers the thrill of pursuing and tracking wild animals, but does so in a
-            much less intrusive way. Requiring little more than a pair of binoculars and a field guide, birdwatching
-            is possible anywhere, with birds living on all seven continents.</p>
-    </section>
+<hr>
 
-    <section class="bottom_container">
-        <div class="tours_part">
-            <h2 class="tours_heading">Tour Photos</h2>
-            <a href="../images/tours/canopywalk.jpg" target="_blank">
-            <img src="../images/tours/canopywalk.jpg" alt="Picture of Canopy Bridge" class="skywalk_pic_link">
-            </a>
-            <a href="../images/tours/riverhomepgpic.jpg" target="_blank">
-            <img src="../images/tours/riverhomepgpic.jpg" alt="" class="riverboat_pic_link">
-            </a>
-            <a href="../images/tours/hikehomepgpic.jpg" target="_blank">
-            <img src="../images/tours/hikehomepgpic.jpg" alt="Picture of Forest" class="hiking_pic_link">
-            </a>
-        </div>
-    </section>
-
-
-    <hr>
-
-    <footer>
-        <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
-                Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
-            Reserved.</p>
-    </footer>
+<footer>
+    <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
+        Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+        Reserved.</p>
+</footer>
 
 </body>
 </html>
