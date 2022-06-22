@@ -35,7 +35,7 @@ header {
   justify-content: space-between;
 }
 
-.nav_list a:hover {
+.nav_list a:hover, a:hover {
   background-color: var(--orange);
   transition: 0.5s;
   text-transform: uppercase;
@@ -112,18 +112,16 @@ ul {
   text-shadow: 5px 5px 10px var(--black);
 }
 
-.amazon_pic {
+.amazon_pic, .tours_feature_img {
   width: 100%;
+  height: 500px;
+  border: 3px double #23272a;
 }
 
 .bird_pic {
   width: 650px;
   height: 450px;
   transition: transform .2s;
-}
-
-.bird_pic:hover {
-  transform: scale(1.1);
 }
 
 .tours_part {
@@ -137,7 +135,7 @@ ul {
   transition: transform .2s;
 }
 
-.skywalk_pic_link:hove, .riverboat_pic_link:hover, .hiking_pic_link:hover {
+.skywalk_pic_link:hover, .riverboat_pic_link:hover, .hiking_pic_link:hover, .bird_pic:hover {
   transform: scale(1.1);
 }
 
@@ -162,7 +160,11 @@ ul {
   margin: 0;
 }
 
-.tours_feature_img {
-  width: 100%;
-  height: 850px;
+.circle-image {
+  border-radius: 50%;
+}
+
+a:link, a:visited {
+  color: var(--black);
+  text-decoration: none;
 }

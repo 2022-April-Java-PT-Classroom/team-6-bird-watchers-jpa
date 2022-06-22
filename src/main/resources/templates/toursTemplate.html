@@ -51,7 +51,7 @@
     <h4>Current Available Tours:</h4>
     <ul class="center-list">
         <li th:each="tour:${tours}">
-            <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}" target="_blank">Tour</a>
+            <a th:href="@{'/tour/' + ${tour.id}}" th:text="${tour.tourName}">Tour</a>
         </li>
     </ul>
 </section>
