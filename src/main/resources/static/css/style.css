@@ -33,12 +33,14 @@ header {
   margin-left: auto;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 a:hover {
   background-image: radial-gradient(var(--orange), transparent, transparent);
   transition: 0.5s;
   text-transform: uppercase;
+  transform: scale(1.1);
 }
 
 .companylogo {
@@ -191,4 +193,5 @@ a:link, a:visited {
   color: var(--black);
   text-decoration: none;
   font-weight: bold;
+  transition: transform .2s;
 }
