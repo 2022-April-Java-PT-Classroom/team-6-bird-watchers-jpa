@@ -68,12 +68,22 @@ h2, footer {
   text-align: center;
 }
 
+h2 {
+  font-family: 'Playfair Display SC', serif;
+}
+
 hr {
   border-color: var(--black);
 }
 
 ul {
   display: inline;
+}
+
+p, .format-width {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
 }
 
 .center-list {
@@ -86,7 +96,7 @@ ul {
   display: block;
 }
 
-.center-text, h4, h3, .intro, .bird_watching_info, .terms_h, .middle_container_tours {
+.center-text, p, h4, h3, .intro, .bird_watching_info, .terms_h, .middle_container_tours {
   text-align: center;
 }
 
@@ -114,8 +124,13 @@ ul {
   text-shadow: 5px 5px 10px var(--black);
 }
 
+.bird_watching {
+  padding-top: 100px;
+}
+
 .paradise {
   font-family: 'Dancing Script', cursive;
+  font-size: 100px;
 }
 
 .amazon_pic, .tours_feature_img {
