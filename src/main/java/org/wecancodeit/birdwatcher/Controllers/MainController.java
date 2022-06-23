@@ -36,5 +36,11 @@ public class MainController {
         model.addAttribute("Tours", tourRepository.findAll());
         return "terms-and-conditions";
     }
+
+    @RequestMapping("/sike")
+    public String displaySikePage(Model model) {
+        model.addAttribute("Sike", tourRepository.findAll());
+        return "sike";
+    }
 }
 
