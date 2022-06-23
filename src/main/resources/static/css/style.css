@@ -218,3 +218,7 @@ a:link, a:visited {
 .cover {
   object-fit: cover;
 }
+
+.italic {
+  font-style: italic;
+}
