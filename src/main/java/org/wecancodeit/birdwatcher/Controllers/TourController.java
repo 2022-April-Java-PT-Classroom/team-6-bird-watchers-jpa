@@ -14,14 +14,14 @@ public class TourController {
     private TourRepository tourRepository;
 
     @RequestMapping("/tours")
-    public String displayAllTours(Model model){
-    model.addAttribute("tours", tourRepository.findAll());
-    return "toursTemplate";
+    public String displayAllTours(Model model) {
+        model.addAttribute("tours", tourRepository.findAll());
+        return "toursTemplate";
     }
 
     @RequestMapping("/tour/{id}")
-    public String displaySingleTourById(@PathVariable long id, Model model){
-    model.addAttribute("tour", tourRepository.findById(id));
-    return "tourTemplate";
+    public String displaySingleTourById(@PathVariable long id, Model model) {
+        model.addAttribute("tour", tourRepository.findById(id));
+        return "tourTemplate";
     }
 }

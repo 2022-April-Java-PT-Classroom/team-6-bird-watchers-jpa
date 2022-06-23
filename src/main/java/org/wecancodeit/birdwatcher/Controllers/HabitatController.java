@@ -8,7 +8,6 @@ import org.wecancodeit.birdwatcher.Repositories.HabitatRepository;
 
 import javax.annotation.Resource;
 
-
 @Controller
 public class HabitatController {
 
@@ -16,15 +15,15 @@ public class HabitatController {
     private HabitatRepository habitatRepo;
 
     @RequestMapping("/habitats")
-    public String displayAllHabitats(Model model){
+    public String displayAllHabitats(Model model) {
         model.addAttribute("habitats", habitatRepo.findAll());
         return "habitatsTemplate";
     }
 
     @RequestMapping("/habitat/{id}")
-    public String displaySingleHabitatById(@PathVariable long id, Model model){
-    model.addAttribute("habitat", habitatRepo.findById(id));
-    return "habitatTemplate";
+    public String displaySingleHabitatById(@PathVariable long id, Model model) {
+        model.addAttribute("habitat", habitatRepo.findById(id));
+        return "habitatTemplate";
     }
 
 }

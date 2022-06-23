@@ -63,16 +63,20 @@ public class Populator implements CommandLineRunner {
 
         birdRepository.findAll();
 
-        Tour toucantisRiverTour = new Tour("Toucantis River Tour", "Paddle down the Amazon River to observe the birds feeding and nesting", brazil, toucantis, river, toucan);
+        Tour toucantisRiverTour = new Tour("Toucantis River Tour", "Paddle down the Amazon River to observe the birds feeding and nesting.", brazil, toucantis, river, toucan, macaw);
         tourRepository.save(toucantisRiverTour);
-        Tour amazonasRainforestTour = new Tour("Amazonas Rainforest Tour", "Explore the rainforest taking in the sights and sounds", brazil, amazonas, rainforest, harpyEagle);
+        Tour amazonasRainforestTour = new Tour("Amazonas Rainforest Tour", "Explore the rainforest while taking in the sights and sounds.", brazil, amazonas, rainforest, harpyEagle, kingVulture, hoatzin);
         tourRepository.save(amazonasRainforestTour);
-        Tour amazonasSkywalkTour = new Tour("Amazonas Skywalk Tour", "Walk among the treetops and observe the birds nesting and flying about", brazil, amazonas, canopy, kingVulture);
+        Tour amazonasSkywalkTour = new Tour("Amazonas Skywalk Tour", "Walk among the treetops and observe the birds nesting and flying about.", brazil, amazonas, canopy, kingVulture);
         tourRepository.save(amazonasSkywalkTour);
-        Tour orinoquiaRiverTour = new Tour("Orinoquia River Tour", "Paddle down the Orinoco River and see the birds feeding and nesting", colombia, orinoquia, river, macaw);
+        Tour orinoquiaRiverTour = new Tour("Orinoquia River Tour", "Paddle down the Orinoco River and see the birds feeding and nesting.", colombia, orinoquia, river, macaw, toucan);
         tourRepository.save(orinoquiaRiverTour);
+<<<<<<< HEAD
         Tour amazoniaRainforestTour = new Tour("Amazonia Rainforest Tour", "Walk though the rainforest taking in the sights and sounds", colombia, amazonia, rainforest, hoatzin);
 
+=======
+        Tour amazoniaRainforestTour = new Tour("Amazonia Rainforest Tour", "Walk though a less-traveled part of the rainforest while taking in the sights and sounds.", colombia, amazonia, rainforest, hoatzin, kingVulture, harpyEagle);
+>>>>>>> c4efad974aa4b18e40b8b3855714bed087b5bf38
         tourRepository.save(amazoniaRainforestTour);
         tourRepository.findAll();
 
