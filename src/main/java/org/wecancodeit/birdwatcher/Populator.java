@@ -60,6 +60,7 @@ public class Populator implements CommandLineRunner {
         birdRepository.save(kingVulture);
         Bird hoatzin = new Bird("Hoatzin", "Folivore", "Opisthocomiformes");
         birdRepository.save(hoatzin);
+
         birdRepository.findAll();
 
         Tour toucantisRiverTour = new Tour("Toucantis River Tour", "Paddle down the Amazon River to observe the birds feeding and nesting", brazil, toucantis, river, toucan);
@@ -71,6 +72,7 @@ public class Populator implements CommandLineRunner {
         Tour orinoquiaRiverTour = new Tour("Orinoquia River Tour", "Paddle down the Orinoco River and see the birds feeding and nesting", colombia, orinoquia, river, macaw);
         tourRepository.save(orinoquiaRiverTour);
         Tour amazoniaRainforestTour = new Tour("Amazonia Rainforest Tour", "Walk though the rainforest taking in the sights and sounds", colombia, amazonia, rainforest, hoatzin);
+
         tourRepository.save(amazoniaRainforestTour);
         tourRepository.findAll();
 
