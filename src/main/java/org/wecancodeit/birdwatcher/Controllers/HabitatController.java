@@ -26,9 +26,4 @@ public class HabitatController {
         return "habitatTemplate";
     }
 
-//    @RequestMapping("/habitat/{habitatName}")
-//    public String displaySingleHabitatByName(@PathVariable String habitatName, Model model){
-//        model.addAttribute("Habitat", habitatRepo.findByHabitatName(habitatName));
-//        return "habitatTemplate";
-//    }
 }

@@ -24,10 +24,5 @@ public class RegionController {
         model.addAttribute("region", regionRepository.findById(id));
         return "regionTemplate";
     }
-//
-//    @RequestMapping("/region/{regionName}")
-//    public String displaySingleRegionByName(@PathVariable String regionName, Model model){
-//    model.addAttribute("Region", regionRepository.findByRegionName(regionName));
-//    return "regionTemplate";
-//    }
+
 }
