@@ -27,22 +27,5 @@ public class BirdController {
     model.addAttribute("bird", birdRepository.findById(id));
     return "birdTemplate";
     }
-//
-//    @RequestMapping("/bird/{birdName}")
-//    public String displaySingleBirdByName(@PathVariable String birdName, Model model){
-//    model.addAttribute("bird", birdRepository.findByBirdName(birdName));
-//    return "birdTemplate";
-//    }
-//
-//    @RequestMapping("/bird/{birdType}")
-//    public String displayBirdsByBirdType(@PathVariable String birdType, Model model){
-//    model.addAttribute("Bird", birdRepository.findByBirdType(birdType));
-//    return "birdTemplate";
-//    }
-//
-//    @RequestMapping("/bird/{birdOrder}")
-//    public String displayBirdsByBirdOrder(@PathVariable String birdOrder, Model model){
-//    model.addAttribute("Bird", birdRepository.findByBirdOrder(birdOrder));
-//    return "birdTemplate";
-//    }
+
 }

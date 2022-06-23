@@ -25,40 +25,5 @@ public class TourController {
     model.addAttribute("tour", tourRepository.findById(id));
     return "tourTemplate";
     }
-//
-//    @RequestMapping("/tour/{tourName}")
-//    public String displaySingleTourByName(@PathVariable String tourName, Model model){
-//    model.addAttribute("tourName", tourRepository.findByTourName(tourName));
-//    return "tourTemplate";
-//    }
-//
-//    @RequestMapping("/tour/{tourDescription}")
-//    public String displaySingleTourByDescription(@PathVariable String tourDescription, Model model){
-//    model.addAttribute("tourDescription", tourRepository.findByTourDescription(tourDescription));
-//    return "tourTemplate";
-//    }
-//
-//    @RequestMapping("/tour/{tourCountry}")
-//    public String displaySingleTourByCountry(@PathVariable String tourCountry, Model model){
-//    model.addAttribute("Tour", tourRepository.findByTourCountry(tourCountry));
-//    return "tourTemplate";
-//    }
-//
-//    @RequestMapping("/tour/{tourRegion}")
-//    public String displaySingleTourByRegion(@PathVariable String tourRegion, Model model){
-//    model.addAttribute("Tour", tourRepository.findByTourRegion(tourRegion));
-//    return "tourTemplate";
-//    }
-//
-//    @RequestMapping("/tour/{tourHabitat}")
-//    public String displaySingleTourByHabitat(@PathVariable String tourHabitat, Model model){
-//    model.addAttribute("Tour", tourRepository.findByTourHabitat(tourHabitat));
-//    return "tourTemplate";
-//    }
-//
-//    @RequestMapping("/tour/{tourBirds}")
-//    public String displaySingleTourByBirds(@PathVariable String tourBirds, Model model){
-//    model.addAttribute("Tour", tourRepository.findByTourBirds(tourBirds));
-//    return "tourTemplate";
-//    }
+
 }
