@@ -18,6 +18,7 @@ public class MainController {
         model.addAttribute("Tours", tourRepository.findAll());
         return "index";
     }
+
     @RequestMapping("/about")
     public String displayAboutPage(Model model) {
         model.addAttribute("Tours", tourRepository.findAll());
@@ -25,13 +26,13 @@ public class MainController {
     }
 
     @RequestMapping("/faq")
-    public String displayFaqPage(Model model){
+    public String displayFaqPage(Model model) {
         model.addAttribute("Tours", tourRepository.findAll());
         return "faq";
     }
 
     @RequestMapping("/termsAndConditions")
-    public String displayTermsAndConditionsPage(Model model){
+    public String displayTermsAndConditionsPage(Model model) {
         model.addAttribute("Tours", tourRepository.findAll());
         return "terms-and-conditions";
     }

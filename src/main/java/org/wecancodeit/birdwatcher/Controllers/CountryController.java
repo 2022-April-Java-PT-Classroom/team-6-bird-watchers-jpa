@@ -15,15 +15,15 @@ public class CountryController {
     private CountryRepository countryRepository;
 
     @RequestMapping("/countries")
-    public String displayAllCountries(Model model){
-    model.addAttribute("countries", countryRepository.findAll());
-    return "countriesTemplate";
+    public String displayAllCountries(Model model) {
+        model.addAttribute("countries", countryRepository.findAll());
+        return "countriesTemplate";
     }
 
     @RequestMapping("/country/{id}")
-    public String displaySingleCountryById(@PathVariable long id, Model model){
-    model.addAttribute("country", countryRepository.findById(id));
-    return "countryTemplate";
+    public String displaySingleCountryById(@PathVariable long id, Model model) {
+        model.addAttribute("country", countryRepository.findById(id));
+        return "countryTemplate";
     }
 //
 //    @RequestMapping("/country/{countryName}")

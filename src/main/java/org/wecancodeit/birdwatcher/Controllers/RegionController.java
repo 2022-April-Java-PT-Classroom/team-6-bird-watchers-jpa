@@ -14,15 +14,15 @@ public class RegionController {
     private RegionRepository regionRepository;
 
     @RequestMapping("/regions")
-    public String displayAllRegions(Model model){
-    model.addAttribute("regions", regionRepository.findAll());
-    return "regionsTemplate";
+    public String displayAllRegions(Model model) {
+        model.addAttribute("regions", regionRepository.findAll());
+        return "regionsTemplate";
     }
 
     @RequestMapping("/region/{id}")
-    public String displaySingleRegionById(@PathVariable long id, Model model){
-    model.addAttribute("region", regionRepository.findById(id));
-    return "regionTemplate";
+    public String displaySingleRegionById(@PathVariable long id, Model model) {
+        model.addAttribute("region", regionRepository.findById(id));
+        return "regionTemplate";
     }
 //
 //    @RequestMapping("/region/{regionName}")
