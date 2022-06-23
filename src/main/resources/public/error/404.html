@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | JAC Enterprises</title>
 </head>
 <body>
-<h1>PAGE NOT FOUND</h1>
+
+<header>
+    <nav class="navbar">
+        <img src="../images/JAC.png" alt="JACEnterprisesLogo" class="companylogo">
+        <ul class="nav_list">
+            <li class="nav_searchbar">
+            </li>
+            <li>
+                <div class="searchbar">
+                    <form th:action="@{/}">
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here"
+                               th:value="${keyword}"
+                               required/>
+                        <input type="button" onclick="location.href='../sike'" value="Search" id="search-button"/>
+                    </form>
+                </div>
+            </li>
+            <li><a href="..//" class="nav_home_link">Home</a></li>
+            <li><a href="../tours" class="nav_tours_link">Tours</a></li>
+            <li><a href="../about" class="nav_about_link">About</a></li>
+            <li><a href="../faq" class="nav_faq_link">Faq</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="terms_h">404 Page is Out of Order</h1>
+<p>
+    We apologize for the inconvenience. We're working on training
+    more birds to help us fetch your search results.
+    Thank you for your patience!
+</p>
+
+<img src="../images/other/silly-bird.png" class="center-image border-image">
+
+<br>
+
+<div id="return">
+    <a href="/">Return Home</a>
+</div>
+
+<hr>
+
+<footer>
+    <p>&copy JAC Enterprises | <a href="../termsAndConditions" class="terms_conditions">Terms &
+        Conditions</a> | <a href="mailto:info@jacenterprises.com" class="contact_us">Contact Us</a> | All Rights
+        Reserved.</p>
+</footer>
+
 </body>
 </html>
