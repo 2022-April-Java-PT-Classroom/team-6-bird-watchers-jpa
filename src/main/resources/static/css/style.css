@@ -214,3 +214,11 @@ a:link, a:visited {
   font-weight: bold;
   transition: transform .2s;
 }
+
+.cover {
+  object-fit: cover;
+}
+
+.italic {
+  font-style: italic;
+}

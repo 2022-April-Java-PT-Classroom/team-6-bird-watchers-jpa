@@ -7,7 +7,8 @@ import java.util.Collection;
 
 @Entity
 public class Bird {
-    @Id@GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
     private String birdName;
     private String birdType;
@@ -15,9 +16,7 @@ public class Bird {
     @ManyToMany
     private Collection<Tour> birdTours;
 
-
-
-    protected Bird(){
+    protected Bird() {
 
     }
 
@@ -27,7 +26,6 @@ public class Bird {
         this.birdOrder = birdOrder;
         this.birdTours = new ArrayList<>(Arrays.asList(tours));
     }
-
 
     public Long getId() {
         return id;
@@ -45,7 +43,9 @@ public class Bird {
         return birdOrder;
     }
 
-    public Collection<Tour> getBirdTours(){ return birdTours;}
+    public Collection<Tour> getBirdTours() {
+        return birdTours;
+    }
 
     @Override
     public String toString() {

@@ -11,20 +11,19 @@ public class Habitat {
     private Long id;
     private String habitatName;
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
-    public String getHabitatName(){
+    public String getHabitatName() {
         return habitatName;
     }
 
-    public Habitat(){
+    public Habitat() {
 
     }
 
     public Habitat(String habitatName) {
-        this.id = id;
         this.habitatName = habitatName;
     }
 

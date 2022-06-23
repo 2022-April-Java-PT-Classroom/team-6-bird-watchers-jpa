@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
-    <title>Countries</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | JAC Enterprises</title>
 </head>
 <body>
 
@@ -18,7 +22,8 @@
             <li>
                 <div class="searchbar">
                     <form th:action="@{/}">
-                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here" th:value="${keyword}"
+                        <input type="text" name="keyword" id="keyword" size="50" placeholder="Search Here"
+                               th:value="${keyword}"
                                required/>
                         <input type="button" onclick="location.href='../sike'" value="Search" id="search-button"/>
                     </form>
@@ -32,13 +37,16 @@
     </nav>
 </header>
 
-<h2>List of Countries</h2>
+<h1 class="terms_h">Search Function is Out of Order</h1>
+<p>
+    We apologize for the inconvenience. We're working on training
+    more birds to help us fetch your search results.
+    Thank you for your patience!
+</p>
 
-<ul class="center-list">
-    <li th:each="country:${countries}">
-        <a th:href="@{'/country/' + ${country.id}}" th:text="${country.countryName}" target="_blank">Countries</a>
-    </li>
-</ul>
+<img src="../images/other/silly-bird.png" class="center-image border-image">
+
+<br>
 
 <div id="return">
     <a href="/">Return Home</a>
